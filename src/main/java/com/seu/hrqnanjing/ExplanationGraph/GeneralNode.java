@@ -10,6 +10,8 @@ import java.util.ArrayList;
 public class GeneralNode {
     private int nodeID = -1;
 
+    public GeneralNode(){};
+
     public GeneralNode(int ID) {
         this.nodeID = ID;
     }
@@ -22,12 +24,13 @@ public class GeneralNode {
         this.nodeID = nodeID;
     }
 
-    public String getNodeElement(GeneralNode node){
-        if(node instanceof LiteralNode){
-            return ((LiteralNode) node).getLiterals();
-        }else if(node instanceof RuleNode){
-            return ((RuleNode) node).getRule().toString();
+    public String getNodeElement(){
+        if(this instanceof LiteralNode){
+            return ((LiteralNode) this).getLiterals();
+        }else if(this instanceof RuleNode){
+            return ((RuleNode) this).getRule().toString();
         }
         return null;
     }
+
 }

@@ -16,9 +16,11 @@ public class RuleNode extends GeneralNode {
     ArrayList<LiteralNode> negNodeList = new ArrayList<LiteralNode>();
     ArrayList<LiteralNode> connectedNodeList = new ArrayList<LiteralNode>();
 
-    public RuleNode(int ID) {
-        super(ID);
+    public RuleNode(ASPRule rule){
+        this.rule = rule;
+        rule.setRuleType();
     }
+
 
     public RuleNode(int ID, ASPRule rule) {
         super(ID);

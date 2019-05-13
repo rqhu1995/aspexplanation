@@ -10,10 +10,10 @@ public class LiteralNode extends GeneralNode {
         return literals;
     }
 
-    private String literals = "";
+    private String literals = null;
 
-    public LiteralNode(int ID) {
-        super(ID);
+    public LiteralNode(String literals){
+        this.literals = literals;
     }
 
     public LiteralNode(int ID, String literals) {

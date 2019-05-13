@@ -22,14 +22,6 @@ public class ASPRule {
         this.head.add(headIndex);
     }
 
-    public HashSet<Integer> getPosBody() {
-        return positiveBody;
-    }
-
-    public HashSet<Integer> getNegBody() {
-        return negativeBody;
-    }
-
     void setPosbody(int posLiteral) {
         positiveBody.add(posLiteral);
     }
@@ -81,13 +73,6 @@ public class ASPRule {
         }
     }
 
-    public HashSet<Integer> getPositiveBody() {
-        return positiveBody;
-    }
-
-    public HashSet<Integer> getNegativeBody() {
-        return negativeBody;
-    }
 
     public int getRuleType() {
         return ruleType;
@@ -104,8 +89,8 @@ public class ASPRule {
             }
 
             if (((ASPRule) anObject).getHead().equals(this.getHead()) &&
-                    ((ASPRule) anObject).getPosBody().equals(this.getPosBody()) &&
-                    ((ASPRule) anObject).getNegBody().equals(this.getNegBody())) {
+                    ((ASPRule) anObject).getPosbody().equals(this.getPosbody()) &&
+                    ((ASPRule) anObject).getNegbody().equals(this.getNegbody())) {
                 return true;
             }
         }
