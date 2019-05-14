@@ -11,6 +11,11 @@ public class ASPRule {
     private HashSet<HashSet<Integer>> body = new HashSet<>();
     private HashMap<String, Integer> literalMap = new HashMap<>();
     private HashMap<Integer, String> literalReverseMap = new HashMap<>();
+    private HashMap<String, String> ruleLiteralByPart = new HashMap<>();
+
+    public String getRuleLiteralByPart(String part) {
+        return ruleLiteralByPart.get(part);
+    }
 
     public HashMap<String, Integer> getLiteralMap() {
         return literalMap;
@@ -29,6 +34,9 @@ public class ASPRule {
     void setNegbody(int negLiteral) {
         negativeBody.add(negLiteral);
     }
+
+
+
 
     public void setBody() {
         body.add(getPosbody());
@@ -52,9 +60,45 @@ public class ASPRule {
         return body;
     }
 
+    public void setRuleLiteralByPart(){
+
+        StringBuffer head = new StringBuffer();
+        StringBuffer posBody = new StringBuffer();
+        StringBuffer negBody = new StringBuffer();
+
+        for (Integer i : this.getHead()) {
+            head.append(literalReverseMap.get(i)+",");
+        }
+        for (Integer i : this.getPosbody()) {
+            posBody.append(literalReverseMap.get(i)+",");
+        }
+        for (Integer i : this.getNegbody()) {
+            negBody.append(literalReverseMap.get(i)+",");
+        }
+
+        String headLit = (((head.length()-1)>=0)?head.substring(0,head.length()-1):"");
+        String posLit = (((posBody.length()-1)>=0)?posBody.substring(0,posBody.length()-1):"");
+        String negLit = (((negBody.length()-1)>=0)?negBody.substring(0,negBody.length()-1):"");
+
+        setRuleLiteralByPart("head", headLit);
+        setRuleLiteralByPart("posBody", posLit);
+        setRuleLiteralByPart("negBody", negLit);
+
+        System.out.println(headLit+"!!!"+posLit+"!!!"+negLit+"!!!");
+
+    }
+
     @Override
     public String toString() {
-        return "head:" + this.getHead() + ",posBody:" + this.getPosbody() + ",negBody:" + this.getNegbody();
+
+        return "====Rule " + ruleType + "====\n"+ "head:[" + getRuleLiteralByPart("head") +
+                "],posBody:[" + getRuleLiteralByPart("posBody") +
+                "],negBody:[" + getRuleLiteralByPart("negBody")+"]"
+                + "\n==============";
+    }
+
+    public void setRuleLiteralByPart(String part, String content) {
+        this.ruleLiteralByPart.put(part,content);
     }
 
     public void setRuleType() {
@@ -73,7 +117,13 @@ public class ASPRule {
         }
     }
 
-
+    /**
+    * @Description: 获取规则类型
+    * @Param: []
+    * @return: 1：完整rule，2：事实，3：约束，4：空规则
+    * @Author: Runqiu Hu
+    * @Date: 2019-05-14
+    */
     public int getRuleType() {
         return ruleType;
     }

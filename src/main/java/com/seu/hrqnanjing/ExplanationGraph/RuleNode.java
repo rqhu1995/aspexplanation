@@ -37,10 +37,15 @@ public class RuleNode extends GeneralNode {
             return null;
     }
 
+    public ArrayList<LiteralNode> getConnectedNodeList() {
+        return connectedNodeList;
+    }
+
     public ASPRule getRule() {
         return rule;
     }
 
+    //1正体部，2负体部
     public void setConnectedNodeList(LiteralNode node, int type) {
         if(type == 1){
             posNodeList.add(node);

@@ -11,6 +11,11 @@ import java.util.HashSet;
 public class ExplanationSpace {
     private ArrayList<LiteralNode> literalNodeList = new ArrayList<LiteralNode>();
     private ArrayList<RuleNode> ruleNodeList = new ArrayList<RuleNode>();
+
+    public ArrayList<GeneralNode> getNodeList() {
+        return nodeList;
+    }
+
     private ArrayList<GeneralNode> nodeList = new ArrayList<>();
 
     /**
@@ -70,7 +75,7 @@ public class ExplanationSpace {
      * @Date: 2019-05-12
      */
     public int nodeCount() {
-        return this.literalNodeList.size() + this.ruleNodeList.size();
+        return nodeList.size();
     }
 
     public GeneralNode contains(GeneralNode node) {

@@ -12,7 +12,7 @@ public class LiteralNode extends GeneralNode {
 
     private String literals = null;
 
-    public LiteralNode(String literals){
+    public LiteralNode(String literals) {
         this.literals = literals;
     }
 
@@ -32,21 +32,21 @@ public class LiteralNode extends GeneralNode {
     public void setConnectedNodeList(RuleNode ruleNode) {
         this.connectedNodeList.add(ruleNode);
     }
-    
-    /** 
-    * @Description: 重写equals方法，判断文字节点是否相等 
-    * @Param: [anObject] 
-    * @return: boolean 
-    * @Author: Runqiu Hu
-    * @Date: 2019-05-12 
-    */
+
+    /**
+     * @Description: 重写equals方法，判断文字节点是否相等
+     * @Param: [anObject]
+     * @return: boolean
+     * @Author: Runqiu Hu
+     * @Date: 2019-05-12
+     */
     @Override
     public boolean equals(Object anObject) {
         if (this == anObject) {
             return true;
         }
         if (anObject instanceof LiteralNode) {
-            if(this.getLiterals().equals(((LiteralNode) anObject).getLiterals())){
+            if (this.getLiterals().equals(((LiteralNode) anObject).getLiterals())) {
                 return true;
             }
         }

@@ -82,6 +82,7 @@ public class ASPRuleExtractor extends LPMLNBaseVisitor {
     }
 
     public ASPRule getRuleForParse() {
+        ruleForParse.setRuleLiteralByPart();
         return ruleForParse;
     }
 
