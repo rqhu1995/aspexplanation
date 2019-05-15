@@ -27,6 +27,9 @@ public class RuleFileParser {
             // 按行读取字符串
             String str;
             while ((str = bf.readLine()) != null) {
+                if(str.startsWith("{")){
+                    continue;
+                }
                 parser(str);
             }
             bf.close();

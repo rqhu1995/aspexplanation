@@ -7,7 +7,9 @@ import com.seu.hrqnanjing.Util.ShellExecutor;
 import jdk.nashorn.tools.Shell;
 
 import java.io.*;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 /**
@@ -45,33 +47,72 @@ public class GroundRuleGenerator {
         FileOutputStream fileOutputStream = new FileOutputStream(new File(ruleFileComplement));
         RuleFileParser ruleFileParser = new RuleFileParser(ruleFileRaw);
         ArrayList<ASPRule> ruleList = ruleFileParser.parsingRule();
+//        for (ASPRule r : ruleList) {
+//            if (r.getNegbody().size() != 0) {
+//                    for (Integer i : r.getNegbody()) {
+//
+//                        String choice = "{" + r.getLiteralReverseMap().get(i) + ":";
+//                        int counter=0;
+//                        for (Integer j : r.getPosbody()) {
+//                            if(counter != 0)
+//                                choice += ",";
+//                            choice += r.getLiteralReverseMap().get(j);
+//                            counter++;
+//                        }
+//
+//                        if(counter != 0){
+//                            choice += ",";
+//                        }
+//
+//                        for (Integer k : r.getNegbody()) {
+//                            if (r.getLiteralReverseMap().get(k) != r.getLiteralReverseMap().get(i))
+//                                choice += r.getLiteralReverseMap().get(k) + ",";
+//                        }
+//                        choice = choice.substring(0, choice.length() - 1);
+//                        choice += "}.\n";
+//                        fileOutputStream.write(choice.getBytes());
+//                    }
+//            }
+//        }
         for (ASPRule r : ruleList) {
-            if (r.getNegbody().size() != 0) {
+            if (r.getRuleType()!=2 && r.getRuleType()!=4) {
+                for (Integer i : r.getPosbody()) {
+                    generateEnumerate(fileOutputStream, r, i);
+                }
+
                 for (Integer i : r.getNegbody()) {
-
-                    String choice = "{" + r.getLiteralReverseMap().get(i) + ":";
-                    int counter1=0, counter2=0;
-                    for (Integer j : r.getPosbody()) {
-                        if(counter1 != 0)
-                            choice += ",";
-                        choice += r.getLiteralReverseMap().get(j);
-                        counter1++;
-                    }
-
-                    if(counter1 != 0){
-                        choice += ",";
-                    }
-
-                    for (Integer k : r.getNegbody()) {
-                        if (r.getLiteralReverseMap().get(k) != r.getLiteralReverseMap().get(i))
-                            choice += r.getLiteralReverseMap().get(k) + ",";
-                    }
-                    choice = choice.substring(0, choice.length() - 1);
-                    choice += "}.\n";
-                    fileOutputStream.write(choice.getBytes());
+                    generateEnumerate(fileOutputStream, r, i);
                 }
             }
         }
+    }
+
+    public void generateEnumerate(FileOutputStream fileOutputStream, ASPRule r, Integer i) throws IOException {
+        String choice = "{" + r.getLiteralReverseMap().get(i) + ":";
+        int counter=0;
+        for (Integer j : r.getPosbody()) {
+            if(r.getLiteralReverseMap().get(j)==r.getLiteralReverseMap().get(i)){
+                continue;
+            }
+            if(counter != 0)
+                choice += ",";
+            choice += r.getLiteralReverseMap().get(j);
+            counter++;
+        }
+
+        if(counter != 0){
+            choice += ",";
+        }
+
+        for (Integer k : r.getNegbody()) {
+            if(r.getLiteralReverseMap().get(k)==r.getLiteralReverseMap().get(i)){
+                continue;
+            }
+            choice += r.getLiteralReverseMap().get(k) + ",";
+        }
+        choice = choice.substring(0, choice.length() - 1);
+        choice += "}.\n";
+        fileOutputStream.write(choice.getBytes());
     }
 
     public void getGroundFile(String pattern){
@@ -86,6 +127,35 @@ public class GroundRuleGenerator {
             System.out.println("命令执行错误");
         }else{
             System.out.println("实例化程序位置"+outputFilename);
+        }
+    }
+
+    public void filter() {
+        try {
+            InputStreamReader inputReader = new InputStreamReader(new FileInputStream(outputFilename));
+            OutputStreamWriter outputWriter = new OutputStreamWriter(new FileOutputStream("updated.lp"));
+            BufferedReader br = new BufferedReader(inputReader);
+            BufferedWriter bw = new BufferedWriter(outputWriter);
+            HashSet<String> record = new HashSet<>();
+            // 按行读取字符串
+            String str;
+            while ((str = br.readLine()) != null) {
+                if (str.contains("{") || str.contains("}")) {
+                    str = str.replace("{", "").replace("}", "");
+                }
+                if (!record.contains(str)) {
+                    record.add(str);
+                    bw.write(str + "\n");
+                } else {
+                    bw.write("\n");
+                }
+            }
+            br.close();
+            bw.close();
+            inputReader.close();
+            outputWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

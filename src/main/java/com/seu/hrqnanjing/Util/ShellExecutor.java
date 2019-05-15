@@ -15,8 +15,16 @@ public class ShellExecutor {
         Process process = null;
         boolean executeResult = true;
         try {
+            String shell;
             //执行Shell命令，成功返回true
-            process = Runtime.getRuntime().exec(new String[] {"sh","-c",command});
+            if(System.getProperty("os.name").startsWith("Windows")){
+                shell = "cmd";
+                command = "gringo -t --keep-fact rules_raw.lp enumerate.lp > rules_grounded.lp";
+                System.out.printf(command);
+            }else{
+                shell = "sh";
+            }
+            process = Runtime.getRuntime().exec("cmd.exe /c "+ command);
             return true;
         } catch (IOException e) {
             e.printStackTrace();

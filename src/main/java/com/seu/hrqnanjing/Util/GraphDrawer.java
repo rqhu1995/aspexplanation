@@ -77,11 +77,11 @@ public class GraphDrawer {
             MutableNode mutParentNode = mutableNodeHashMap.get(parentNode.getNodeID());
             //当前节点为正体部
             if (gNode instanceof LiteralNode && ((RuleNode) parentNode).getConnectedNodeList(1).contains(gNode)) {
-                mutParentNode.addLink(between(port("pbody", SOUTH), mutableNodeHashMap.get(gNode.getNodeID()).port(NORTH)).with(Label.of("✅")));
+                mutParentNode.addLink(between(port("pbody", SOUTH), mutableNodeHashMap.get(gNode.getNodeID()).port(NORTH)).with(Label.of("√")));
             }
             //当前节点为负体部
             else if (gNode instanceof LiteralNode && ((RuleNode) parentNode).getConnectedNodeList(2).contains(gNode)) {
-                mutParentNode.addLink(between(port("nbody", SOUTH), mutableNodeHashMap.get(gNode.getNodeID()).port(NORTH)).with(Label.of("❌")));
+                mutParentNode.addLink(between(port("nbody", SOUTH), mutableNodeHashMap.get(gNode.getNodeID()).port(NORTH)).with(Label.of("×")));
             }
             //节点非规则节点（文字节点）
             else {
@@ -127,7 +127,10 @@ public class GraphDrawer {
     }
 
     public void graphDisplay() {
-        graph.graphAttrs().add("ranksep", 1).graphAttrs().add("nodesep", 0.5).graphAttrs().add("splines", "compound");
+        graph.graphAttrs().add("ranksep", 1).
+                graphAttrs().add("nodesep", 0.5).
+                graphAttrs().add("splines", "compound").
+                graphAttrs().add("dpi",0);
         try {
             Graphviz.fromGraph(graph).render(Format.SVG).toFile(new File("example/ex2m.svg"));
         } catch (IOException e) {

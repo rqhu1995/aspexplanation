@@ -10,12 +10,13 @@ import java.io.IOException;
 
 public class TestApp {
     public static void main(String[] args) throws IOException {
-        GroundRuleGenerator generator = new GroundRuleGenerator("src/main/resources/rules_raw.lp","src/main/resources/enumerate.lp", "src/main/resources/rules_grounded.lp");
+        GroundRuleGenerator generator = new GroundRuleGenerator("rules_raw.lp","enumerate.lp", "rules_grounded.lp");
         generator.gringoInputComplement();
-        generator.getGroundFile("grep \"^[^#{]\"");
+        generator.getGroundFile("grep \"^[^#]\"");
+        generator.filter();
         ExplanationSpace explanationSpace = new ExplanationSpace();
-        while(new File("src/main/resources/rules_grounded.lp").length()==0);
-        explanationSpace.setAllNode("src/main/resources/rules_grounded.lp");
+        ///while(new File("rules_grounded.lp").length()==0);
+        explanationSpace.setAllNode("updated.lp");
         GraphDrawer graphDrawer = new GraphDrawer(explanationSpace);
         graphDrawer.spaceTraversal();
         graphDrawer.graphDisplay();

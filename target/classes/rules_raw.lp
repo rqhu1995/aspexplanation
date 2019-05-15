@@ -1,3 +1,6 @@
-eagle(eddy).
-fly(X) :- bird(X), not neg_fly(X).
-bird(X) :- eagle(X).
+abnormal(A) :- not father(A, B), person(A), child(B).
+father(A, B):- call_father(A, B).
+call_father("jack", "peter").
+child("jack").
+person("peter").
+person("sam").
