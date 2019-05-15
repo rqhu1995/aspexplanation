@@ -1,6 +1,6 @@
-eagle(eddy).
-penguin(tux).
- fly(X) :- bird(X), not -fly(X).
--fly(X) :- penguin(X).
-bird(X) :- penguin(X).
-bird(X) :- eagle(X).
+abnormal(A) :- not father(A, B), person(A), child(B).
+father(A, B):- call_father(B, A),person(A), child(B).
+call_father("jack", "peter").
+child("jack").
+person("peter").
+person("sam").

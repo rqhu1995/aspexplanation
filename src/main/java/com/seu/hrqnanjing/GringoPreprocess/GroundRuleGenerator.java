@@ -75,45 +75,64 @@ public class GroundRuleGenerator {
 //            }
 //        }
         for (ASPRule r : ruleList) {
-            if (r.getRuleType()!=2 && r.getRuleType()!=4) {
-                for (Integer i : r.getPosbody()) {
-                    generateEnumerate(fileOutputStream, r, i);
+            if (r.getLiteralReverseMap().size() <= 1) {
+                continue;
+            }
+            for (Integer key : r.getLiteralReverseMap().keySet()) {
+                String choice = "{" + r.getLiteralReverseMap().get(key) + ": ";
+                for (Integer others : r.getLiteralReverseMap().keySet()) {
+                    if (others != key) {
+                        choice += r.getLiteralReverseMap().get(others) + ",";
+                    }
                 }
-
-                for (Integer i : r.getNegbody()) {
-                    generateEnumerate(fileOutputStream, r, i);
-                }
+                choice = choice.substring(0, choice.length() - 1) + "}.\n";
+                fileOutputStream.write(choice.getBytes());
             }
         }
     }
+//            if(r.getPosbody().size()+r.getNegbody().size()<=1){
+//                continue;
+//            }
+//            if (r.getRuleType()!=2 && r.getRuleType()!=4) {
+//                for (Integer i : r.getPosbody()) {
+//                    generateEnumerate(fileOutputStream, r, i);
+//                }
+//
+//                for (Integer i : r.getNegbody()) {
+//                    generateEnumerate(fileOutputStream, r, i);
+//                }
+//            }
+//        }
 
-    public void generateEnumerate(FileOutputStream fileOutputStream, ASPRule r, Integer i) throws IOException {
-        String choice = "{" + r.getLiteralReverseMap().get(i) + ":";
-        int counter=0;
-        for (Integer j : r.getPosbody()) {
-            if(r.getLiteralReverseMap().get(j)==r.getLiteralReverseMap().get(i)){
-                continue;
-            }
-            if(counter != 0)
-                choice += ",";
-            choice += r.getLiteralReverseMap().get(j);
-            counter++;
-        }
 
-        if(counter != 0){
-            choice += ",";
-        }
-
-        for (Integer k : r.getNegbody()) {
-            if(r.getLiteralReverseMap().get(k)==r.getLiteralReverseMap().get(i)){
-                continue;
-            }
-            choice += r.getLiteralReverseMap().get(k) + ",";
-        }
-        choice = choice.substring(0, choice.length() - 1);
-        choice += "}.\n";
-        fileOutputStream.write(choice.getBytes());
-    }
+//    public void generateEnumerate(FileOutputStream fileOutputStream, ASPRule r, Integer i) throws IOException {
+//
+//        String choice = "{" + r.getLiteralReverseMap().get(i) + ": ";
+//        int counter=0;
+//        for (Integer j : r.getPosbody()) {
+//            if(r.getLiteralReverseMap().get(j)==r.getLiteralReverseMap().get(i)){
+//                continue;
+//            }
+//            if(counter != 0)
+//                choice += ",";
+//            choice += r.getLiteralReverseMap().get(j);
+//            counter++;
+//        }
+//
+//        if(counter != 0){
+//            choice += ",";
+//        }
+//
+//        for (Integer k : r.getNegbody()) {
+//            if(r.getLiteralReverseMap().get(k)==r.getLiteralReverseMap().get(i)){
+//                continue;
+//            }
+//            choice += r.getLiteralReverseMap().get(k) + ",";
+//        }
+//        choice = choice.substring(0, choice.length() - 1);
+//        choice += "}.\n";
+//        fileOutputStream.write(choice.getBytes());
+//    }
 
     public void getGroundFile(String pattern){
         ShellExecutor executor = new ShellExecutor();

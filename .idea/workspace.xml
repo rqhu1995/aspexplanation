@@ -2,28 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58a4756b-40fc-4bc6-aeb2-27d1b458affa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/enumerate.lp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rules_grounded.lp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rules_raw.lp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enumerate.lp" beforeDir="false" afterPath="$PROJECT_DIR$/enumerate.lp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex2m.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ex2m.png" beforeDir="false" afterPath="$PROJECT_DIR$/example/ex2m.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/ex2m.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ASPParser/RuleFileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ASPParser/RuleFileParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/png3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rules_grounded.lp" beforeDir="false" afterPath="$PROJECT_DIR$/rules_grounded.lp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rules_raw.lp" beforeDir="false" afterPath="$PROJECT_DIR$/rules_raw.lp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ExplanationGraph/TestApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ExplanationGraph/TestApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/GringoPreprocess/GroundRuleGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/GringoPreprocess/GroundRuleGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/Util/GraphDrawer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/Util/GraphDrawer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/Util/ShellExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/Util/ShellExecutor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/enumerate.lp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/enumerate.lp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/rules_grounded.lp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rules_grounded.lp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/rules_raw.lp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rules_raw.lp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/aspexplanation.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ExplanationGraph/TestApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ExplanationGraph/TestApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/GringoPreprocess/GroundRuleGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/GringoPreprocess/GroundRuleGenerator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/Util/GraphDrawer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/Util/GraphDrawer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/Util/ShellExecutor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/Util/ShellExecutor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/enumerate.lp" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/enumerate.lp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rules_grounded.lp" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rules_grounded.lp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rules_raw.lp" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rules_raw.lp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/updated.lp" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,31 +34,21 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/rules_grounded.lp">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/Util/GraphDrawer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-124">
+              <caret line="83" column="67" selection-start-line="83" selection-start-column="67" selection-end-line="83" selection-end-column="67" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ExplanationGraph/TestApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
+            <state relative-caret-position="306">
               <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/Util/GraphDrawer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="131" column="53" selection-start-line="131" selection-start-column="53" selection-end-line="131" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example/ex2m.png">
-          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -71,11 +56,43 @@
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3">
+              <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/example/ex2m.PNG">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ExplanationGraph/ExplanationSpace.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1458">
+              <caret line="111" column="42" lean-forward="true" selection-start-line="111" selection-start-column="42" selection-end-line="111" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#466#467#0" expanded="true" />
+                <element signature="e#497#498#0" expanded="true" />
+                <element signature="docComment;method#getLiteralNodeList#0;class#ExplanationSpace#0" />
+                <element signature="docComment;method#setLiteralNodeList#0;class#ExplanationSpace#0" />
+                <element signature="docComment;method#setRuleNodeList#0;class#ExplanationSpace#0" />
+                <element signature="docComment;method#nodeCount#0;class#ExplanationSpace#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rules_raw.lp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+            <state relative-caret-position="90">
+              <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -83,8 +100,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rules_grounded.lp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="60" lean-forward="true" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
+            <state relative-caret-position="162">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -95,21 +112,8 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/updated.lp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/GringoPreprocess/GroundRuleGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="149" column="35" selection-start-line="149" selection-start-column="35" selection-end-line="149" selection-end-column="35" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/example/png3.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -188,12 +192,12 @@
         <option value="$PROJECT_DIR$/src/main/resources/rules_grounded.lp" />
         <option value="$PROJECT_DIR$/src/main/resources/enumerate.lp" />
         <option value="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ASPParser/RuleFileParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/Util/ShellExecutor.java" />
         <option value="$PROJECT_DIR$/rules_grounded.lp" />
         <option value="$PROJECT_DIR$/enumerate.lp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/GringoPreprocess/GroundRuleGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ExplanationGraph/TestApp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/Util/ShellExecutor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/Util/GraphDrawer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/GringoPreprocess/GroundRuleGenerator.java" />
         <option value="$PROJECT_DIR$/rules_raw.lp" />
       </list>
     </option>
@@ -221,9 +225,8 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="130" />
-    <option name="y" value="-18" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="825" />
   </component>
@@ -233,7 +236,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -290,6 +292,15 @@
               <item name="hrqnanjing" type="462c0819:PsiDirectoryNode" />
               <item name="ExplanationGraph" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="aspexplanation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aspexplanation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hrqnanjing" type="462c0819:PsiDirectoryNode" />
+              <item name="GringoPreprocess" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -310,6 +321,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -448,17 +460,18 @@
       <workItem from="1557802442654" duration="4661000" />
       <workItem from="1557813780924" duration="23877000" />
       <workItem from="1557910697912" duration="10607000" />
+      <workItem from="1557930390863" duration="3259000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73478000" />
+    <option name="totallyTimeSpent" value="76737000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="825" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49796748" visible="true" weight="0.19370331" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49796748" visible="true" weight="0.19599427" />
       <window_info id="Structure" order="1" sideWeight="0.5020325" side_tool="true" weight="0.27825466" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -466,9 +479,9 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3278867" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.24509804" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39869282" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32742155" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.24420191" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3983629" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -642,20 +655,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exetended_grounding" />
-    <entry file="file://$PROJECT_DIR$/extended_grounding.lp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/extended_grounding.lp" />
     <entry file="file://$PROJECT_DIR$/res.txt" />
-    <entry file="file://$PROJECT_DIR$/groundedrules.lp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rules_to_ground.lp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/groundedrules.lp" />
+    <entry file="file://$PROJECT_DIR$/rules_to_ground.lp" />
     <entry file="uml://JavaScript-modules-diagram//Users/bobhu/project/aspexplanation/src/main/java/com/seu/hrqnanjing">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -769,22 +772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ExplanationGraph/ExplanationSpace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="91" column="62" lean-forward="true" selection-start-line="91" selection-start-column="62" selection-end-line="91" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#466#467#0" expanded="true" />
-            <element signature="e#497#498#0" expanded="true" />
-            <element signature="docComment;method#getLiteralNodeList#0;class#ExplanationSpace#0" />
-            <element signature="docComment;method#setLiteralNodeList#0;class#ExplanationSpace#0" />
-            <element signature="docComment;method#setRuleNodeList#0;class#ExplanationSpace#0" />
-            <element signature="docComment;method#nodeCount#0;class#ExplanationSpace#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ASPParser/ASPRuleExtractor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="269">
@@ -802,10 +789,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/Util/GraphTestApp.java" />
-    <entry file="file://$PROJECT_DIR$/ex2m.svg">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/guru/nidi/graphviz-java/0.8.6/graphviz-java-0.8.6.jar!/guru/nidi/graphviz/engine/GraphvizCmdLineEngine.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -828,18 +811,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/example/png3.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/example/ex1m.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ASPParser/ASPRule.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -859,13 +832,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/io/RandomAccessFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="536" column="23" selection-start-line="536" selection-start-column="23" selection-end-line="536" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/io/RandomAccessFile.java" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -886,67 +853,106 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/Util/ShellExecutor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/enumerate.lp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/rules_grounded.lp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/updated.lp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" selection-start-line="2" selection-end-line="3" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/Util/ShellExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ex2m.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/Util/GraphTestApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="25" column="47" lean-forward="true" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/GringoPreprocess/GroundRuleGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="149" column="35" selection-start-line="149" selection-start-column="35" selection-end-line="149" selection-end-column="35" />
+        <state relative-caret-position="417">
+          <caret line="88" column="58" selection-start-line="88" selection-start-column="58" selection-end-line="88" selection-end-column="58" />
+          <folding>
+            <element signature="e#3796#3909#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3">
+          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/enumerate.lp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/rules_grounded.lp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ExplanationGraph/ExplanationSpace.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="60" lean-forward="true" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
+        <state relative-caret-position="1458">
+          <caret line="111" column="42" lean-forward="true" selection-start-line="111" selection-start-column="42" selection-end-line="111" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#466#467#0" expanded="true" />
+            <element signature="e#497#498#0" expanded="true" />
+            <element signature="docComment;method#getLiteralNodeList#0;class#ExplanationSpace#0" />
+            <element signature="docComment;method#setLiteralNodeList#0;class#ExplanationSpace#0" />
+            <element signature="docComment;method#setRuleNodeList#0;class#ExplanationSpace#0" />
+            <element signature="docComment;method#nodeCount#0;class#ExplanationSpace#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/updated.lp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/example/png3.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/rules_grounded.lp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/ex2m.png">
+    <entry file="file://$PROJECT_DIR$/example/ex2m.PNG">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ExplanationGraph/TestApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="306">
           <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/Util/GraphDrawer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="131" column="53" selection-start-line="131" selection-start-column="53" selection-end-line="131" selection-end-column="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/example/ex2m.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/Util/GraphDrawer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-124">
+          <caret line="83" column="67" selection-start-line="83" selection-start-column="67" selection-end-line="83" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rules_grounded.lp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/rules_raw.lp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        <state relative-caret-position="90">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
         </state>
       </provider>
     </entry>

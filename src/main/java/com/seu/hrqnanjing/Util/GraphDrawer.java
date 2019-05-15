@@ -127,12 +127,12 @@ public class GraphDrawer {
     }
 
     public void graphDisplay() {
-        graph.graphAttrs().add("ranksep", 1).
-                graphAttrs().add("nodesep", 0.5).
-                graphAttrs().add("splines", "compound").
-                graphAttrs().add("dpi",0);
+//        graph.graphAttrs().add("ranksep", 1).
+//                graphAttrs().add("nodesep", 0.5).
+//                graphAttrs().add("splines", "compound");
+                //graphAttrs().add("dpi",0);
         try {
-            Graphviz.fromGraph(graph).render(Format.SVG).toFile(new File("example/ex2m.svg"));
+            Graphviz.fromGraph(graph).render(Format.PNG).toFile(new File("example/ex2m.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }

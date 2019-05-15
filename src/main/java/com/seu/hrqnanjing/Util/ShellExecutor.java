@@ -20,11 +20,11 @@ public class ShellExecutor {
             if(System.getProperty("os.name").startsWith("Windows")){
                 shell = "cmd";
                 command = "gringo -t --keep-fact rules_raw.lp enumerate.lp > rules_grounded.lp";
-                System.out.printf(command);
+                //System.out.printf(command);
             }else{
                 shell = "sh";
             }
-            process = Runtime.getRuntime().exec("cmd.exe /c "+ command);
+            process = Runtime.getRuntime().exec(new String[]{shell,"-c",command});
             return true;
         } catch (IOException e) {
             e.printStackTrace();
