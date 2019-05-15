@@ -50,18 +50,19 @@ public class GroundRuleGenerator {
                 for (Integer i : r.getNegbody()) {
 
                     String choice = "{" + r.getLiteralReverseMap().get(i) + ":";
-                    int j=0, k=0;
-                    for (j = 0; j < r.getPosbody().size();j++) {
-                        if(j != 0)
+                    int counter1=0, counter2=0;
+                    for (Integer j : r.getPosbody()) {
+                        if(counter1 != 0)
                             choice += ",";
                         choice += r.getLiteralReverseMap().get(j);
+                        counter1++;
                     }
 
-                    if(j != 0){
+                    if(counter1 != 0){
                         choice += ",";
                     }
 
-                    for (k=0; k<r.getNegbody().size();k++) {
+                    for (Integer k : r.getNegbody()) {
                         if (r.getLiteralReverseMap().get(k) != r.getLiteralReverseMap().get(i))
                             choice += r.getLiteralReverseMap().get(k) + ",";
                     }

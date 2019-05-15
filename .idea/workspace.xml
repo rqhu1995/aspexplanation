@@ -2,71 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58a4756b-40fc-4bc6-aeb2-27d1b458affa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/GringoPreprocess/GroundRuleGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/Util/ShellExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/enumerate.lp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/rules_grounded.lp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/rules_raw.lp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extended_grounding.lp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groundedrules.lp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rules_to_ground.lp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ASPParser/ASPRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ASPParser/ASPRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ASPParser/ASPRuleExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ASPParser/ASPRuleExtractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ExplanationGraph/ExplanationSpace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ExplanationGraph/ExplanationSpace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ExplanationGraph/LiteralNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ExplanationGraph/LiteralNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ExplanationGraph/RuleNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ExplanationGraph/RuleNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ExplanationGraph/TestApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ExplanationGraph/TestApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/GringoPreprocess/GringoInputGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/ASPRule.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/ASPRule.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/ASPRuleExtractor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/ASPRuleExtractor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNBaseListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNBaseListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNBaseVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNBaseVisitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNLexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNLexer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Aggregate_elementsContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Aggregate_elementsContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Aggregate_elements_conditionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Aggregate_elements_conditionContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Arithmethic_exprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Arithmethic_exprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Arithmetic_opContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Arithmetic_opContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$AtomContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$AtomContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$BodyContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$BodyContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Body_aggregateContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Body_aggregateContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$ConstraintContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$ConstraintContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Default_literalContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Default_literalContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Extended_literalContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Extended_literalContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$FactContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$FactContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Full_ruleContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Full_ruleContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$FunctionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$FunctionContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Hard_ruleContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Hard_ruleContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$HeadContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$HeadContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Head_aggregateContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Head_aggregateContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$IntegerContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$IntegerContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$LiteralContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$LiteralContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Literal_tupleContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Literal_tupleContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Lpmln_ruleContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Lpmln_ruleContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Meta_ruleContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Meta_ruleContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Natural_numberContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Natural_numberContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Negative_intContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Negative_intContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Range_atomContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Range_atomContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Relation_exprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Relation_exprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Relation_opContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Relation_opContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Simple_arithmetic_expr2Context.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Simple_arithmetic_expr2Context.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Simple_arithmetic_exprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Simple_arithmetic_exprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Soft_ruleContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Soft_ruleContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$TermContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$TermContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Term_tupleContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser$Term_tupleContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/LPMLNVisitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/RuleFileParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ASPParser/RuleFileParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ExplanationGraph/ExplanationSpace.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ExplanationGraph/ExplanationSpace.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ExplanationGraph/GeneralNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ExplanationGraph/GeneralNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ExplanationGraph/LiteralNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ExplanationGraph/LiteralNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ExplanationGraph/RuleNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ExplanationGraph/RuleNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ExplanationGraph/TestApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/ExplanationGraph/TestApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/hrqnanjing/GringoPreprocess/GringoInputGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ex2m.svg" beforeDir="false" afterPath="$PROJECT_DIR$/example/ex2m.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/GringoPreprocess/GroundRuleGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/GringoPreprocess/GroundRuleGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/enumerate.lp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/enumerate.lp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/rules_grounded.lp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rules_grounded.lp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/rules_raw.lp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rules_raw.lp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -82,9 +23,18 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/enumerate.lp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="21" lean-forward="true" selection-start-column="21" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ExplanationGraph/TestApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
+            <state relative-caret-position="334">
               <caret line="21" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -93,11 +43,41 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/rules_raw.lp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/GringoPreprocess/GroundRuleGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="303">
+              <caret line="64" column="34" lean-forward="true" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/rules_grounded.lp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/Util/GraphDrawer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1026">
-              <caret line="86" column="18" lean-forward="true" selection-start-line="86" selection-start-column="18" selection-end-line="86" selection-end-column="18" />
+            <state relative-caret-position="-1275">
+              <caret line="43" column="54" lean-forward="true" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
               <folding>
                 <element signature="docComment;class#GraphDrawer#0" />
                 <element signature="e#509#510#0" expanded="true" />
@@ -108,32 +88,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/example/ex2m.svg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example/png3.png">
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/example/ex1m.png">
           <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ExplanationGraph/RuleNode.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="47" column="15" selection-start-line="47" selection-start-column="15" selection-end-line="47" selection-end-column="15" />
-              <folding>
-                <element signature="e#952#953#0" expanded="true" />
-                <element signature="e#992#993#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -171,27 +133,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ASPParser/RuleFileParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="48" column="35" lean-forward="true" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ASPParser/ASPRuleExtractor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="84" column="36" selection-start-line="84" selection-start-column="36" selection-end-line="84" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -261,10 +202,7 @@
         <option value="$PROJECT_DIR$/extended_grounding.lp" />
         <option value="$PROJECT_DIR$/groundedrules.lp" />
         <option value="$PROJECT_DIR$/res.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/GringoPreprocess/GroundRuleGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/Util/ShellExecutor.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/rules_raw.lp" />
-        <option value="$PROJECT_DIR$/src/main/resources/enumerate.lp" />
         <option value="$PROJECT_DIR$/src/main/resources/rules_grounded.lp" />
         <option value="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ExplanationGraph/GeneralNode.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ExplanationGraph/LiteralNode.java" />
@@ -276,6 +214,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ASPParser/ASPRule.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/Util/GraphDrawer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ExplanationGraph/TestApp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/GringoPreprocess/GroundRuleGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/enumerate.lp" />
+        <option value="$PROJECT_DIR$/src/main/resources/rules_raw.lp" />
       </list>
     </option>
   </component>
@@ -302,11 +243,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="166" />
-    <option name="y" value="40" />
-    <option name="width" value="1280" />
-    <option name="height" value="817" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="825" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -352,57 +292,6 @@
               <item name="aspexplanation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aspexplanation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aspexplanation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aspexplanation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aspexplanation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hrqnanjing" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aspexplanation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aspexplanation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hrqnanjing" type="462c0819:PsiDirectoryNode" />
-              <item name="ASPParser" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aspexplanation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aspexplanation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hrqnanjing" type="462c0819:PsiDirectoryNode" />
-              <item name="ExplanationGraph" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aspexplanation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aspexplanation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hrqnanjing" type="462c0819:PsiDirectoryNode" />
-              <item name="GringoPreprocess" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aspexplanation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aspexplanation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hrqnanjing" type="462c0819:PsiDirectoryNode" />
-              <item name="Util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="aspexplanation" type="b2602c69:ProjectViewProjectNode" />
@@ -549,18 +438,18 @@
       <workItem from="1557801288538" duration="292000" />
       <workItem from="1557801603017" duration="64000" />
       <workItem from="1557802442654" duration="4661000" />
-      <workItem from="1557813780924" duration="21705000" />
+      <workItem from="1557813780924" duration="23877000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60699000" />
+    <option name="totallyTimeSpent" value="62871000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="825" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="825" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49796748" visible="true" weight="0.15164521" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49796748" visible="true" weight="0.15164521" />
       <window_info id="Structure" order="1" sideWeight="0.5020325" side_tool="true" weight="0.27825466" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -569,7 +458,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3287858" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.3287858" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" weight="0.3287858" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39972714" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -920,23 +809,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/GringoPreprocess/GroundRuleGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/rules_raw.lp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/src.zip!/java/lang/AbstractStringBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -958,16 +830,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/rules_grounded.lp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/enumerate.lp">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -1064,9 +926,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/example/ex2m.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ASPParser/ASPRule.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="67">
@@ -1095,16 +954,6 @@
     <entry file="file://$PROJECT_DIR$/example/ex1m.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ExplanationGraph/TestApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/Util/GraphTestApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="292">
@@ -1117,8 +966,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/Util/GraphDrawer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="86" column="18" lean-forward="true" selection-start-line="86" selection-start-column="18" selection-end-line="86" selection-end-column="18" />
+        <state relative-caret-position="-1275">
+          <caret line="43" column="54" lean-forward="true" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
           <folding>
             <element signature="docComment;class#GraphDrawer#0" />
             <element signature="e#509#510#0" expanded="true" />
@@ -1127,6 +976,50 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/ExplanationGraph/TestApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/seu/hrqnanjing/GringoPreprocess/GroundRuleGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="64" column="34" lean-forward="true" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/rules_grounded.lp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/enumerate.lp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" lean-forward="true" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/rules_raw.lp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/ex2m.svg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
   <component name="masterDetails">

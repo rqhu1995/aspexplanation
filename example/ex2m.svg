@@ -1,185 +1,96 @@
-<svg width="1306px" height="527px"
- viewBox="0.00 0.00 979.64 394.97" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform=" rotate(0) translate(4 390.9688)">
+<svg width="374px" height="848px"
+ viewBox="0.00 0.00 280.24 635.94" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform=" rotate(0) translate(4 631.9375)">
 <title>expGraph</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-390.9688 975.644,-390.9688 975.644,4 -4,4"/>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-631.9375 276.2446,-631.9375 276.2446,4 -4,4"/>
 <!-- 1 -->
 <g id="node1" class="node">
 <title>1</title>
-<polygon fill="none" stroke="#000000" points="11.1171,-.5 11.1171,-36.5 95.5449,-36.5 95.5449,-.5 11.1171,-.5"/>
-<text text-anchor="middle" x="53.331" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#000000">person(tom)</text>
+<polygon fill="none" stroke="#000000" points="107.4924,-.5 107.4924,-36.5 189.5618,-36.5 189.5618,-.5 107.4924,-.5"/>
+<text text-anchor="middle" x="148.5271" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#000000">eagle(eddy)</text>
 </g>
 <!-- 3 -->
 <g id="node2" class="node">
 <title>3</title>
-<polygon fill="none" stroke="#000000" points="158.1601,-.5 158.1601,-36.5 272.5019,-36.5 272.5019,-.5 158.1601,-.5"/>
-<text text-anchor="middle" x="215.331" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#000000">couple(tom,alice)</text>
+<polygon fill="none" stroke="#000000" points="32.0027,-241.4688 32.0027,-277.4688 209.0515,-277.4688 209.0515,-241.4688 32.0027,-241.4688"/>
+<text text-anchor="middle" x="69.5476" y="-255.2688" font-family="Times,serif" font-size="14.00" fill="#000000">bird(eddy)</text>
+<polyline fill="none" stroke="#000000" points="107.0925,-241.4688 107.0925,-277.4688 "/>
+<text text-anchor="middle" x="148.1272" y="-255.2688" font-family="Times,serif" font-size="14.00" fill="#000000">eagle(eddy)</text>
+<polyline fill="none" stroke="#000000" points="189.1619,-241.4688 189.1619,-277.4688 "/>
+<text text-anchor="middle" x="199.1067" y="-255.2688" font-family="Times,serif" font-size="14.00" fill="#000000">/</text>
+</g>
+<!-- eagle(eddy) -->
+<g id="node4" class="node">
+<title>eagle(eddy)</title>
+<ellipse fill="none" stroke="#000000" cx="148.5271" cy="-128" rx="51.683" ry="18"/>
+<text text-anchor="middle" x="148.5271" y="-123.8" font-family="Times,serif" font-size="14.00" fill="#000000">eagle(eddy)</text>
+</g>
+<!-- 3&#45;&gt;eagle(eddy) -->
+<g id="edge2" class="edge">
+<title>3:s&#45;&gt;eagle(eddy):n</title>
+<path fill="none" stroke="#000000" d="M148.5271,-241.4688C148.5271,-241.4688 148.5271,-180.8452 148.5271,-156.2168"/>
+<polygon fill="#000000" stroke="#000000" points="152.0272,-156 148.5271,-146 145.0272,-156 152.0272,-156"/>
+<text text-anchor="middle" x="158.0271" y="-193.7688" font-family="Times,serif" font-size="14.00" fill="#000000">✅</text>
 </g>
 <!-- 5 -->
 <g id="node3" class="node">
 <title>5</title>
-<polygon fill="none" stroke="#000000" points="334.0136,-.5 334.0136,-36.5 410.6484,-36.5 410.6484,-.5 334.0136,-.5"/>
-<text text-anchor="middle" x="372.331" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#000000">child(kate)</text>
+<polygon fill="none" stroke="#000000" points="9.051,-482.4375 9.051,-518.4375 246.0032,-518.4375 246.0032,-482.4375 9.051,-482.4375"/>
+<text text-anchor="middle" x="42.7131" y="-496.2375" font-family="Times,serif" font-size="14.00" fill="#000000">fly(eddy)</text>
+<polyline fill="none" stroke="#000000" points="76.3752,-482.4375 76.3752,-518.4375 "/>
+<text text-anchor="middle" x="113.9202" y="-496.2375" font-family="Times,serif" font-size="14.00" fill="#000000">bird(eddy)</text>
+<polyline fill="none" stroke="#000000" points="151.4651,-482.4375 151.4651,-518.4375 "/>
+<text text-anchor="middle" x="198.7341" y="-496.2375" font-family="Times,serif" font-size="14.00" fill="#000000">neg_fly(eddy)</text>
 </g>
-<!-- 7 -->
-<g id="node4" class="node">
-<title>7</title>
-<polygon fill="none" stroke="#000000" points="472.2221,-.5 472.2221,-36.5 590.4399,-36.5 590.4399,-.5 472.2221,-.5"/>
-<text text-anchor="middle" x="531.331" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#000000">mother(alice,kate)</text>
-</g>
-<!-- 9 -->
+<!-- bird(eddy) -->
 <g id="node5" class="node">
-<title>9</title>
-<polygon fill="none" stroke="#000000" points="804.5868,-241.4688 804.5868,-277.4688 942.0751,-277.4688 942.0751,-241.4688 804.5868,-241.4688"/>
-<text text-anchor="middle" x="873.331" y="-255.2688" font-family="Times,serif" font-size="14.00" fill="#000000">call(kate,father,jason)</text>
+<title>bird(eddy)</title>
+<ellipse fill="none" stroke="#000000" cx="69.5271" cy="-368.9688" rx="47.365" ry="18"/>
+<text text-anchor="middle" x="69.5271" y="-364.7688" font-family="Times,serif" font-size="14.00" fill="#000000">bird(eddy)</text>
 </g>
-<!-- 11 -->
-<g id="node6" class="node">
-<title>11</title>
-<polygon fill="none" stroke="#000000" points="658.3154,-.5 658.3154,-36.5 784.3466,-36.5 784.3466,-.5 658.3154,-.5"/>
-<text text-anchor="middle" x="721.331" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#000000">unknown(tom,kate)</text>
-</g>
-<!-- 13 -->
-<g id="node7" class="node">
-<title>13</title>
-<polygon fill="none" stroke="#000000" points="114.1264,-241.4688 114.1264,-277.4688 768.5356,-277.4688 768.5356,-241.4688 114.1264,-241.4688"/>
-<text text-anchor="middle" x="153.2231" y="-255.2688" font-family="Times,serif" font-size="14.00" fill="#000000">green(tom)</text>
-<polyline fill="none" stroke="#000000" points="192.3198,-241.4688 192.3198,-277.4688 "/>
-<text text-anchor="middle" x="427.1464" y="-255.2688" font-family="Times,serif" font-size="14.00" fill="#000000">unknown(tom,kate),mother(alice,kate),child(kate),couple(tom,alice),person(tom)</text>
-<polyline fill="none" stroke="#000000" points="661.9731,-241.4688 661.9731,-277.4688 "/>
-<text text-anchor="middle" x="715.2543" y="-255.2688" font-family="Times,serif" font-size="14.00" fill="#000000">father(tom,kate)</text>
-</g>
-<!-- person(tom) -->
-<g id="node8" class="node">
-<title>person(tom)</title>
-<ellipse fill="none" stroke="#000000" cx="53.331" cy="-128" rx="53.1625" ry="18"/>
-<text text-anchor="middle" x="53.331" y="-123.8" font-family="Times,serif" font-size="14.00" fill="#000000">person(tom)</text>
-</g>
-<!-- 13&#45;&gt;person(tom) -->
-<g id="edge11" class="edge">
-<title>13:s&#45;&gt;person(tom):n</title>
-<path fill="none" stroke="#000000" d="M427.331,-241.4688C427.331,-241.4688 268.331,-204.9688 268.331,-204.9688 268.331,-204.9688 105.1881,-160.223 63.1278,-148.687"/>
-<polygon fill="#000000" stroke="#000000" points="63.9006,-145.2698 53.331,-146 62.049,-152.0205 63.9006,-145.2698"/>
-<text text-anchor="middle" x="277.831" y="-193.7688" font-family="Times,serif" font-size="14.00" fill="#000000">✅</text>
-</g>
-<!-- couple(tom,alice) -->
-<g id="node9" class="node">
-<title>couple(tom,alice)</title>
-<ellipse fill="none" stroke="#000000" cx="215.331" cy="-128" rx="72.4547" ry="18"/>
-<text text-anchor="middle" x="215.331" y="-123.8" font-family="Times,serif" font-size="14.00" fill="#000000">couple(tom,alice)</text>
-</g>
-<!-- 13&#45;&gt;couple(tom,alice) -->
-<g id="edge10" class="edge">
-<title>13:s&#45;&gt;couple(tom,alice):n</title>
-<path fill="none" stroke="#000000" d="M427.331,-241.4688C427.331,-241.4688 265.7423,-168.7014 224.7139,-150.2254"/>
-<polygon fill="#000000" stroke="#000000" points="225.8863,-146.9148 215.331,-146 223.0119,-153.2975 225.8863,-146.9148"/>
-<text text-anchor="middle" x="349.831" y="-193.7688" font-family="Times,serif" font-size="14.00" fill="#000000">✅</text>
-</g>
-<!-- child(kate) -->
-<g id="node10" class="node">
-<title>child(kate)</title>
-<ellipse fill="none" stroke="#000000" cx="372.331" cy="-128" rx="48.3169" ry="18"/>
-<text text-anchor="middle" x="372.331" y="-123.8" font-family="Times,serif" font-size="14.00" fill="#000000">child(kate)</text>
-</g>
-<!-- 13&#45;&gt;child(kate) -->
-<g id="edge9" class="edge">
-<title>13:s&#45;&gt;child(kate):n</title>
-<path fill="none" stroke="#000000" d="M427.331,-241.4688C427.331,-241.4688 391.0224,-178.4445 377.4067,-154.8103"/>
-<polygon fill="#000000" stroke="#000000" points="380.3557,-152.9178 372.331,-146 374.2902,-156.4121 380.3557,-152.9178"/>
-<text text-anchor="middle" x="414.831" y="-193.7688" font-family="Times,serif" font-size="14.00" fill="#000000">✅</text>
-</g>
-<!-- mother(alice,kate) -->
-<g id="node11" class="node">
-<title>mother(alice,kate)</title>
-<ellipse fill="none" stroke="#000000" cx="531.331" cy="-128" rx="74.8511" ry="18"/>
-<text text-anchor="middle" x="531.331" y="-123.8" font-family="Times,serif" font-size="14.00" fill="#000000">mother(alice,kate)</text>
-</g>
-<!-- 13&#45;&gt;mother(alice,kate) -->
-<g id="edge8" class="edge">
-<title>13:s&#45;&gt;mother(alice,kate):n</title>
-<path fill="none" stroke="#000000" d="M427.331,-241.4688C427.331,-241.4688 500.0053,-174.756 523.8516,-152.8659"/>
-<polygon fill="#000000" stroke="#000000" points="526.3311,-155.3409 531.331,-146 521.5973,-150.1841 526.3311,-155.3409"/>
-<text text-anchor="middle" x="501.831" y="-193.7688" font-family="Times,serif" font-size="14.00" fill="#000000">✅</text>
-</g>
-<!-- unknown(tom,kate) -->
-<g id="node13" class="node">
-<title>unknown(tom,kate)</title>
-<ellipse fill="none" stroke="#000000" cx="721.331" cy="-128" rx="79.722" ry="18"/>
-<text text-anchor="middle" x="721.331" y="-123.8" font-family="Times,serif" font-size="14.00" fill="#000000">unknown(tom,kate)</text>
-</g>
-<!-- 13&#45;&gt;unknown(tom,kate) -->
-<g id="edge7" class="edge">
-<title>13:s&#45;&gt;unknown(tom,kate):n</title>
-<path fill="none" stroke="#000000" d="M427.331,-241.4688C427.331,-241.4688 660.5356,-165.7417 711.5491,-149.1764"/>
-<polygon fill="#000000" stroke="#000000" points="712.9009,-152.4174 721.331,-146 710.7389,-145.7597 712.9009,-152.4174"/>
-<text text-anchor="middle" x="618.831" y="-193.7688" font-family="Times,serif" font-size="14.00" fill="#000000">✅</text>
-</g>
-<!-- father(tom,kate) -->
-<g id="node14" class="node">
-<title>father(tom,kate)</title>
-<ellipse fill="none" stroke="#000000" cx="904.331" cy="-128" rx="67.1265" ry="18"/>
-<text text-anchor="middle" x="904.331" y="-123.8" font-family="Times,serif" font-size="14.00" fill="#000000">father(tom,kate)</text>
-</g>
-<!-- 13&#45;&gt;father(tom,kate) -->
-<g id="edge12" class="edge">
-<title>13:s&#45;&gt;father(tom,kate):n</title>
-<path fill="none" stroke="#000000" d="M715.331,-241.4688C715.331,-241.4688 857.4617,-169.6749 895.2151,-150.6047"/>
-<polygon fill="#000000" stroke="#000000" points="896.9831,-153.6328 904.331,-146 893.827,-147.3847 896.9831,-153.6328"/>
-<text text-anchor="middle" x="841.831" y="-193.7688" font-family="Times,serif" font-size="14.00" fill="#000000">❌</text>
-</g>
-<!-- person(tom)&#45;&gt;1 -->
-<g id="edge1" class="edge">
-<title>person(tom)&#45;&gt;1:head</title>
-<path fill="none" stroke="#000000" d="M53.331,-109.9183C53.331,-92.7206 53.331,-66.5894 53.331,-46.6631"/>
-<polygon fill="#000000" stroke="#000000" points="56.8311,-46.6085 53.331,-36.6086 49.8311,-46.6086 56.8311,-46.6085"/>
-</g>
-<!-- couple(tom,alice)&#45;&gt;3 -->
-<g id="edge2" class="edge">
-<title>couple(tom,alice)&#45;&gt;3:head</title>
-<path fill="none" stroke="#000000" d="M215.331,-109.9183C215.331,-92.7206 215.331,-66.5894 215.331,-46.6631"/>
-<polygon fill="#000000" stroke="#000000" points="218.8311,-46.6085 215.331,-36.6086 211.8311,-46.6086 218.8311,-46.6085"/>
-</g>
-<!-- child(kate)&#45;&gt;5 -->
-<g id="edge3" class="edge">
-<title>child(kate)&#45;&gt;5:head</title>
-<path fill="none" stroke="#000000" d="M372.331,-109.9183C372.331,-92.7206 372.331,-66.5894 372.331,-46.6631"/>
-<polygon fill="#000000" stroke="#000000" points="375.8311,-46.6085 372.331,-36.6086 368.8311,-46.6086 375.8311,-46.6085"/>
-</g>
-<!-- mother(alice,kate)&#45;&gt;7 -->
+<!-- 5&#45;&gt;bird(eddy) -->
 <g id="edge4" class="edge">
-<title>mother(alice,kate)&#45;&gt;7:head</title>
-<path fill="none" stroke="#000000" d="M531.331,-109.9183C531.331,-92.7206 531.331,-66.5894 531.331,-46.6631"/>
-<polygon fill="#000000" stroke="#000000" points="534.8311,-46.6085 531.331,-36.6086 527.8311,-46.6086 534.8311,-46.6085"/>
+<title>5:s&#45;&gt;bird(eddy):n</title>
+<path fill="none" stroke="#000000" d="M113.5271,-482.4375C113.5271,-482.4375 84.7589,-420.0178 73.746,-396.1227"/>
+<polygon fill="#000000" stroke="#000000" points="76.8915,-394.5856 69.5271,-386.9688 70.5342,-397.5156 76.8915,-394.5856"/>
+<text text-anchor="middle" x="105.0271" y="-434.7375" font-family="Times,serif" font-size="14.00" fill="#000000">✅</text>
 </g>
-<!-- call(kate,father,jason) -->
-<g id="node12" class="node">
-<title>call(kate,father,jason)</title>
-<ellipse fill="none" stroke="#000000" cx="873.331" cy="-368.9688" rx="86.6964" ry="18"/>
-<text text-anchor="middle" x="873.331" y="-364.7688" font-family="Times,serif" font-size="14.00" fill="#000000">call(kate,father,jason)</text>
+<!-- neg_fly(eddy) -->
+<g id="node6" class="node">
+<title>neg_fly(eddy)</title>
+<ellipse fill="none" stroke="#000000" cx="212.5271" cy="-368.9688" rx="59.9357" ry="18"/>
+<text text-anchor="middle" x="212.5271" y="-364.7688" font-family="Times,serif" font-size="14.00" fill="#000000">neg_fly(eddy)</text>
 </g>
-<!-- call(kate,father,jason)&#45;&gt;9 -->
+<!-- 5&#45;&gt;neg_fly(eddy) -->
 <g id="edge5" class="edge">
-<title>call(kate,father,jason)&#45;&gt;9:head</title>
-<path fill="none" stroke="#000000" d="M873.331,-350.8871C873.331,-333.6893 873.331,-307.5582 873.331,-287.6319"/>
-<polygon fill="#000000" stroke="#000000" points="876.8311,-287.5773 873.331,-277.5773 869.8311,-287.5773 876.8311,-287.5773"/>
+<title>5:s&#45;&gt;neg_fly(eddy):n</title>
+<path fill="none" stroke="#000000" d="M198.5271,-482.4375C198.5271,-482.4375 207.4172,-421.8139 211.0289,-397.1856"/>
+<polygon fill="#000000" stroke="#000000" points="214.5391,-397.3708 212.5271,-386.9688 207.6131,-396.3551 214.5391,-397.3708"/>
+<text text-anchor="middle" x="216.0271" y="-434.7375" font-family="Times,serif" font-size="14.00" fill="#000000">❌</text>
 </g>
-<!-- unknown(tom,kate)&#45;&gt;11 -->
+<!-- eagle(eddy)&#45;&gt;1 -->
+<g id="edge1" class="edge">
+<title>eagle(eddy)&#45;&gt;1:head</title>
+<path fill="none" stroke="#000000" d="M148.5271,-109.9183C148.5271,-92.7206 148.5271,-66.5894 148.5271,-46.6631"/>
+<polygon fill="#000000" stroke="#000000" points="152.0272,-46.6085 148.5271,-36.6086 145.0272,-46.6086 152.0272,-46.6085"/>
+</g>
+<!-- bird(eddy)&#45;&gt;3 -->
+<g id="edge3" class="edge">
+<title>bird(eddy)&#45;&gt;3:head</title>
+<path fill="none" stroke="#000000" d="M69.5271,-350.8913C69.5271,-331.9335 69.5271,-302.8212 69.5271,-287.5747"/>
+<polygon fill="#000000" stroke="#000000" points="73.0272,-287.4687 69.5271,-277.4688 66.0272,-287.4688 73.0272,-287.4687"/>
+</g>
+<!-- fly(eddy) -->
+<g id="node7" class="node">
+<title>fly(eddy)</title>
+<ellipse fill="none" stroke="#000000" cx="42.5271" cy="-609.9375" rx="42.5542" ry="18"/>
+<text text-anchor="middle" x="42.5271" y="-605.7375" font-family="Times,serif" font-size="14.00" fill="#000000">fly(eddy)</text>
+</g>
+<!-- fly(eddy)&#45;&gt;5 -->
 <g id="edge6" class="edge">
-<title>unknown(tom,kate)&#45;&gt;11:head</title>
-<path fill="none" stroke="#000000" d="M721.331,-109.9183C721.331,-92.7206 721.331,-66.5894 721.331,-46.6631"/>
-<polygon fill="#000000" stroke="#000000" points="724.8311,-46.6085 721.331,-36.6086 717.8311,-46.6086 724.8311,-46.6085"/>
-</g>
-<!-- green(tom) -->
-<g id="node15" class="node">
-<title>green(tom)</title>
-<ellipse fill="none" stroke="#000000" cx="153.331" cy="-368.9688" rx="49.286" ry="18"/>
-<text text-anchor="middle" x="153.331" y="-364.7688" font-family="Times,serif" font-size="14.00" fill="#000000">green(tom)</text>
-</g>
-<!-- green(tom)&#45;&gt;13 -->
-<g id="edge13" class="edge">
-<title>green(tom)&#45;&gt;13:head</title>
-<path fill="none" stroke="#000000" d="M153.331,-350.8913C153.331,-331.9335 153.331,-302.8212 153.331,-287.5747"/>
-<polygon fill="#000000" stroke="#000000" points="156.8311,-287.4687 153.331,-277.4688 149.8311,-287.4688 156.8311,-287.4687"/>
+<title>fly(eddy)&#45;&gt;5:head</title>
+<path fill="none" stroke="#000000" d="M42.5271,-591.86C42.5271,-572.9023 42.5271,-543.79 42.5271,-528.5435"/>
+<polygon fill="#000000" stroke="#000000" points="46.0272,-528.4375 42.5271,-518.4375 39.0272,-528.4375 46.0272,-528.4375"/>
 </g>
 </g>
 </svg>
