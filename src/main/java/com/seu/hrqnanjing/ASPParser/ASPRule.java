@@ -12,6 +12,38 @@ public class ASPRule {
     private HashMap<String, Integer> literalMap = new HashMap<>();
     private HashMap<Integer, String> literalReverseMap = new HashMap<>();
     private HashMap<String, String> ruleLiteralByPart = new HashMap<>();
+    private HashMap<String, HashSet<String>> atomVarMap = new HashMap<>();
+    private int ruleID = -1;
+    private HashSet<String> varList = new HashSet<>();
+
+    public int getRuleID() {
+        return ruleID;
+    }
+
+    public void setRuleID(int ruleID) {
+        this.ruleID = ruleID;
+    }
+
+    public void setConstantList(String constant) {
+        this.constantList.add(constant);
+    }
+
+    private HashSet<String> constantList = new HashSet<>();
+
+    public HashSet<String> getVarList() {
+        return varList;
+    }
+
+    public void setVarList(String variable) {
+        varList.add(variable);
+    }
+
+    public void setAtomVarMap(String atom, String variable) {
+        if(!atomVarMap.containsKey(atom)){
+            this.atomVarMap.put(atom,new HashSet<String>());
+        }
+        this.atomVarMap.get(atom).add(variable);
+    }
 
     public String getRuleLiteralByPart(String part) {
         return ruleLiteralByPart.get(part);
@@ -73,7 +105,7 @@ public class ASPRule {
             posBody.append(literalReverseMap.get(i)+",");
         }
         for (Integer i : this.getNegbody()) {
-            negBody.append(literalReverseMap.get(i)+",");
+            negBody.append("not " + literalReverseMap.get(i)+",");
         }
 
         String headLit = (((head.length()-1)>=0)?head.substring(0,head.length()-1):"");
@@ -84,7 +116,7 @@ public class ASPRule {
         setRuleLiteralByPart("posBody", posLit);
         setRuleLiteralByPart("negBody", negLit);
 
-        System.out.println(headLit+"!!!"+posLit+"!!!"+negLit+"!!!");
+        //System.out.println(headLit+"!!!"+posLit+"!!!"+negLit+"!!!");
 
     }
 
@@ -150,5 +182,9 @@ public class ASPRule {
 
     public HashMap<Integer, String> getLiteralReverseMap() {
         return literalReverseMap;
+    }
+
+    public HashSet<String> getConstantList() {
+        return constantList;
     }
 }

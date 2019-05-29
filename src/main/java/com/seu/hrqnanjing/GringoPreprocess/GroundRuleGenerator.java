@@ -47,33 +47,7 @@ public class GroundRuleGenerator {
         FileOutputStream fileOutputStream = new FileOutputStream(new File(ruleFileComplement));
         RuleFileParser ruleFileParser = new RuleFileParser(ruleFileRaw);
         ArrayList<ASPRule> ruleList = ruleFileParser.parsingRule();
-//        for (ASPRule r : ruleList) {
-//            if (r.getNegbody().size() != 0) {
-//                    for (Integer i : r.getNegbody()) {
-//
-//                        String choice = "{" + r.getLiteralReverseMap().get(i) + ":";
-//                        int counter=0;
-//                        for (Integer j : r.getPosbody()) {
-//                            if(counter != 0)
-//                                choice += ",";
-//                            choice += r.getLiteralReverseMap().get(j);
-//                            counter++;
-//                        }
-//
-//                        if(counter != 0){
-//                            choice += ",";
-//                        }
-//
-//                        for (Integer k : r.getNegbody()) {
-//                            if (r.getLiteralReverseMap().get(k) != r.getLiteralReverseMap().get(i))
-//                                choice += r.getLiteralReverseMap().get(k) + ",";
-//                        }
-//                        choice = choice.substring(0, choice.length() - 1);
-//                        choice += "}.\n";
-//                        fileOutputStream.write(choice.getBytes());
-//                    }
-//            }
-//        }
+
         for (ASPRule r : ruleList) {
             if (r.getLiteralReverseMap().size() <= 1) {
                 continue;
@@ -90,49 +64,6 @@ public class GroundRuleGenerator {
             }
         }
     }
-//            if(r.getPosbody().size()+r.getNegbody().size()<=1){
-//                continue;
-//            }
-//            if (r.getRuleType()!=2 && r.getRuleType()!=4) {
-//                for (Integer i : r.getPosbody()) {
-//                    generateEnumerate(fileOutputStream, r, i);
-//                }
-//
-//                for (Integer i : r.getNegbody()) {
-//                    generateEnumerate(fileOutputStream, r, i);
-//                }
-//            }
-//        }
-
-
-//    public void generateEnumerate(FileOutputStream fileOutputStream, ASPRule r, Integer i) throws IOException {
-//
-//        String choice = "{" + r.getLiteralReverseMap().get(i) + ": ";
-//        int counter=0;
-//        for (Integer j : r.getPosbody()) {
-//            if(r.getLiteralReverseMap().get(j)==r.getLiteralReverseMap().get(i)){
-//                continue;
-//            }
-//            if(counter != 0)
-//                choice += ",";
-//            choice += r.getLiteralReverseMap().get(j);
-//            counter++;
-//        }
-//
-//        if(counter != 0){
-//            choice += ",";
-//        }
-//
-//        for (Integer k : r.getNegbody()) {
-//            if(r.getLiteralReverseMap().get(k)==r.getLiteralReverseMap().get(i)){
-//                continue;
-//            }
-//            choice += r.getLiteralReverseMap().get(k) + ",";
-//        }
-//        choice = choice.substring(0, choice.length() - 1);
-//        choice += "}.\n";
-//        fileOutputStream.write(choice.getBytes());
-//    }
 
     public void getGroundFile(String pattern){
         ShellExecutor executor = new ShellExecutor();
@@ -149,33 +80,5 @@ public class GroundRuleGenerator {
         }
     }
 
-    public void filter() {
-        try {
-            InputStreamReader inputReader = new InputStreamReader(new FileInputStream(outputFilename));
-            OutputStreamWriter outputWriter = new OutputStreamWriter(new FileOutputStream("updated.lp"));
-            BufferedReader br = new BufferedReader(inputReader);
-            BufferedWriter bw = new BufferedWriter(outputWriter);
-            HashSet<String> record = new HashSet<>();
-            // 按行读取字符串
-            String str;
-            while ((str = br.readLine()) != null) {
-                if (str.contains("{") || str.contains("}")) {
-                    str = str.replace("{", "").replace("}", "");
-                }
-                if (!record.contains(str)) {
-                    record.add(str);
-                    bw.write(str + "\n");
-                } else {
-                    bw.write("\n");
-                }
-            }
-            br.close();
-            bw.close();
-            inputReader.close();
-            outputWriter.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 }
 

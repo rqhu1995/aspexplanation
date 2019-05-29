@@ -13,13 +13,10 @@ public class TestApp {
         GroundRuleGenerator generator = new GroundRuleGenerator("rules_raw.lp","enumerate.lp", "rules_grounded.lp");
         generator.gringoInputComplement();
         generator.getGroundFile("grep \"^[^#{]\"");
-        //generator.filter();
         ExplanationSpace explanationSpace = new ExplanationSpace();
-        ///while(new File("rules_grounded.lp").length()==0);
         explanationSpace.setAllNode("rules_grounded.lp");
         GraphDrawer graphDrawer = new GraphDrawer(explanationSpace);
         graphDrawer.spaceTraversal();
         graphDrawer.graphDisplay();
-
     }
 }

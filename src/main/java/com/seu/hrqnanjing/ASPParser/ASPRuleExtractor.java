@@ -1,5 +1,6 @@
 package com.seu.hrqnanjing.ASPParser;
 
+import com.seu.hrqnanjing.ASPParser.LPMLNParser.TermContext;
 import com.seu.hrqnanjing.ExplanationGraph.ExplanationSpace;
 import com.seu.hrqnanjing.ExplanationGraph.LiteralNode;
 import com.seu.hrqnanjing.ExplanationGraph.RuleNode;
@@ -44,10 +45,21 @@ public class ASPRuleExtractor extends LPMLNBaseVisitor {
     }
 
 
+
+
     @Override
     public Object visitAtom(LPMLNParser.AtomContext ctx) {
+        for (TermContext termContext : ctx.term()) {
+            if(termContext.CONSTANT()!=null) {
+                ruleForParse.setConstantList(termContext.CONSTANT().getText());
+            }
+            if(termContext.VAR()!=null){
+                ruleForParse.setVarList(termContext.VAR().getText());
+            }
+        }
         return super.visitAtom(ctx);
     }
+
 
     @Override
     public Object visitExtended_literal(LPMLNParser.Extended_literalContext ctx) {

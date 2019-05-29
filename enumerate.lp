@@ -1,8 +1,5 @@
-{abnormal(A): father(A,B),person(A),child(B)}.
-{father(A,B): abnormal(A),person(A),child(B)}.
-{person(A): abnormal(A),father(A,B),child(B)}.
-{child(B): abnormal(A),father(A,B),person(A)}.
-{father(A,B): call_father(B,A),person(A),child(B)}.
-{call_father(B,A): father(A,B),person(A),child(B)}.
-{person(A): father(A,B),call_father(B,A),child(B)}.
-{child(B): father(A,B),call_father(B,A),person(A)}.
+{father(A,B): call_father(A,B),person(A),person(B),older(A,B)}.
+{call_father(A,B): father(A,B),person(A),person(B),older(A,B)}.
+{person(A): father(A,B),call_father(A,B),person(B),older(A,B)}.
+{person(B): father(A,B),call_father(A,B),person(A),older(A,B)}.
+{older(A,B): father(A,B),call_father(A,B),person(A),person(B)}.

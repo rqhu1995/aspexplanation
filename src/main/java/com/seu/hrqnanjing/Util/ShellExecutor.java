@@ -19,7 +19,7 @@ public class ShellExecutor {
             //执行Shell命令，成功返回true
             if(System.getProperty("os.name").startsWith("Windows")){
                 shell = "cmd";
-                command = "gringo -t --keep-fact rules_raw.lp enumerate.lp > rules_grounded.lp";
+                command = "";
                 //System.out.printf(command);
             }else{
                 shell = "sh";

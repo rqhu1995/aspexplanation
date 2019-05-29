@@ -1,33 +1,33 @@
 package com.seu.hrqnanjing.ASPParser;
 
-import com.seu.hrqnanjing.ExplanationGraph.ExplanationSpace;
-import com.sun.javafx.css.Rule;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.HashSet;
 
 public class RuleFileParser {
 
-    private String filename = null;
+    private String filename;
     private ArrayList<ASPRule> ruleList = new ArrayList<>();
 
     public RuleFileParser(String filename) {
         this.filename = filename;
     }
 
-    public ArrayList<ASPRule> parsingRule() throws IOException {
+    public ArrayList<ASPRule> parsingRule() {
         try {
             InputStreamReader inputReader = new InputStreamReader(new FileInputStream(filename));
             BufferedReader bf = new BufferedReader(inputReader);
             // 按行读取字符串
             String str;
             while ((str = bf.readLine()) != null) {
-                if(str.startsWith("{")){
+                if (str.startsWith("{")) {
                     continue;
                 }
                 parser(str);
@@ -49,7 +49,14 @@ public class RuleFileParser {
         ParseTree tree = parser.lpmln_rule();
         ASPRuleExtractor visitor = new ASPRuleExtractor();
         visitor.visit(tree);
-        ruleList.add(visitor.getRuleForParse());
+        ASPRule rulesToAdd = visitor.getRuleForParse();
+        rulesToAdd.setRuleID(ruleList.size());
+        ruleList.add(rulesToAdd);
+    }
+
+    public static void main(String[] args) {
+        RuleFileParser ruleFileParserTest = new RuleFileParser("testFile.lp");
+        ruleFileParserTest.parsingRule();
     }
 
 }
