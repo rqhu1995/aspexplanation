@@ -55,37 +55,52 @@ public class KernelTransformation {
         StringBuffer varComplement = new StringBuffer();
         if(rule.getVarList().size()!=0) {
             for (String var : rule.getVarList()) {
-                varComplement.append("var(").append(var).append(")");
+                varComplement.append("var(").append(var).append("),");
             }
-        }
-        //block正体部
-        StringBuffer posBlock = new StringBuffer();
-        if (rule.getPosbody().size() != 0) {
-            for (Integer i : rule.getPosbody()) {
-                posBlock.append("blocked(" + rule.getRuleID() + ", pB(" + rule.getLiteralReverseMap().get(i))
-                        .append(")):-")
-                        .append("not ")
-                        .append(rule.getLiteralReverseMap().get(i));
-            }
-        }
-        if(posBlock.length()!=0){
-            posBlock.append(",").append(varComplement).append(".\n");
+            varComplement = new StringBuffer(varComplement.substring(0,varComplement.length()-1));
         }
 
-        System.out.println(posBlock);
 
-            StringBuffer negBlock = new StringBuffer();
-            if (rule.getNegbody().size() != 0) {
-                //block负体部
-                for (Integer i : rule.getNegbody()) {
-                    negBlock.append("blocked(" + rule.getRuleID() + ",nB(" + rule.getLiteralReverseMap().get(i))
-                            .append(")):-")
-                            .append(rule.getLiteralReverseMap().get(i))
-                            .append(".\n");
-                }
-            }
-            System.out.println(negBlock);
+        StringBuffer blocked = new StringBuffer();
+        blocked.append("blocked(")
+                .append(rule.getRuleID());
+        pubHeadGenerator(rule, blocked);
+        blocked.append(" :- ");
+
+        for (Integer i : rule.getPosbody()) {
+            StringBuffer posBlocked = new StringBuffer(blocked);
+            posBlocked.append("not ")
+                    .append(rule.getLiteralReverseMap().get(i))
+                    .append(",")
+                    .append(varComplement)
+                    .append(".")
+                    .toString();
+            if(posBlocked.length()!=0)
+                System.out.println(posBlocked);
         }
+
+        for (Integer i : rule.getNegbody()) {
+            StringBuffer negBlocked = new StringBuffer(blocked);
+            negBlocked.append(rule.getLiteralReverseMap().get(i))
+                    .append(".")
+                    .toString();
+
+            if(negBlocked.length()!=0)
+                System.out.println(negBlocked);
+        }
+    }
+
+    private void pubHeadGenerator(ASPRule rule, StringBuffer posBlock) {
+        if(rule.getHead().size()!=0){
+            posBlock.append(",h(").append(rule.getRuleLiteralByPart("head")).append(")");
+        }
+        if(rule.getPosbody().size()!=0){
+            posBlock.append(",pB(").append(rule.getRuleLiteralByPart("posBody")).append(")");
+        }
+        if(rule.getNegbody().size()!=0){
+            posBlock.append(",nB(").append(rule.getRuleLiteralByPart("negBody").replace("not ", "")).append(")");
+        }
+    }
 
     private void applicableGenerator(ASPRule rule) {
         if(rule.getPosbody().size() + rule.getNegbody().size()==0) {
@@ -93,16 +108,8 @@ public class KernelTransformation {
         }
         StringBuffer stringBuffer = new StringBuffer();
         stringBuffer.append("applicable(").append(rule.getRuleID());
-        if(rule.getHead().size()!=0){
-            stringBuffer.append(",h(").append(rule.getRuleLiteralByPart("head")).append(")");
-        }
-        if(rule.getPosbody().size()!=0){
-            stringBuffer.append(",pB(").append(rule.getRuleLiteralByPart("posBody")).append(")");
-        }
-        if(rule.getNegbody().size()!=0){
-            stringBuffer.append(",nB(").append(rule.getRuleLiteralByPart("negBody").replace("not ", "")).append(")");
-        }
-        stringBuffer.append("):-");
+        pubHeadGenerator(rule, stringBuffer);
+        stringBuffer.append(") :- ");
         String lit = rule.getRuleLiteralByPart("posBody");
         if (lit.length() != 0)
             stringBuffer.append(lit);
@@ -112,12 +119,12 @@ public class KernelTransformation {
 
         stringBuffer.append(".");
 
-        System.out.println(stringBuffer);
+        if(stringBuffer.length()!=0)
+            System.out.println(stringBuffer);
     }
 
     public static void main(String[] args) throws IOException {
         KernelTransformation kernelTransformation = new KernelTransformation("rules_raw.lp", "rules_grounded.lp");
         kernelTransformation.kernelTransform();
-
     }
 }
