@@ -4,7 +4,7 @@ import com.seu.hrqnanjing.ASPParser.ASPRule;
 import com.seu.hrqnanjing.ASPParser.RuleFileParser;
 
 import java.io.File;
-import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -18,24 +18,28 @@ import java.util.HashSet;
 
 public class KernelTransformation {
     private String ruleFileName;
-    private String ruleFileComplement;
+    private String ruleComplement;
     private HashSet<String> constantTable = new HashSet<>();
 
-    public KernelTransformation(String ruleFileName, String ruleFileComplement) {
+    public KernelTransformation(String ruleFileName, String ruleComplement) throws IOException {
         this.ruleFileName = ruleFileName;
-        this.ruleFileComplement = ruleFileComplement;
+        this.ruleComplement = ruleComplement;
     }
 
     public void kernelTransform() throws IOException {
         RuleFileParser ruleFileParser = new RuleFileParser(ruleFileName);
         ArrayList<ASPRule> ruleList = ruleFileParser.parsingRule();
         String dummyFactors = dummyAtomGenerator(ruleList).toString();
-        FileOutputStream fileOutputStream = new FileOutputStream(new File(ruleFileComplement));
-        fileOutputStream.write(dummyFactors.getBytes());
+        FileWriter dummyWriter = new FileWriter(ruleComplement,true);
+        dummyWriter.write(dummyFactors);
+        dummyWriter.close();
+
+        FileWriter ruleWriter = new FileWriter(ruleFileName,true);
         for (ASPRule rule : ruleList) {
-            applicableGenerator(rule);
-            blockedGenerator(rule);
+            applicableGenerator(rule, ruleWriter);
+            blockedGenerator(rule, ruleWriter);
         }
+        ruleWriter.close();
     }
 
     private StringBuffer dummyAtomGenerator(ArrayList<ASPRule> ruleList) {
@@ -43,7 +47,7 @@ public class KernelTransformation {
         for (ASPRule rule : ruleList) {
             for (String str : rule.getConstantList()) {
                 if (!constantTable.contains(str)) {
-                    dummy.append("dummy(").append(str).append(").\n");
+                    dummy.append("var(").append(str).append(").\n");
                     constantTable.add(str);
                 }
             }
@@ -51,80 +55,75 @@ public class KernelTransformation {
         return dummy;
     }
 
-    private void blockedGenerator(ASPRule rule) {
+    private void blockedGenerator(ASPRule rule, FileWriter ruleWriter) throws IOException {
+        StringBuffer blockedRule = new StringBuffer("blocked(").append(rule.getRuleID());
         StringBuffer varComplement = new StringBuffer();
-        if(rule.getVarList().size()!=0) {
+        if (rule.getVarList().size() != 0) {
             for (String var : rule.getVarList()) {
                 varComplement.append("var(").append(var).append("),");
             }
-            varComplement = new StringBuffer(varComplement.substring(0,varComplement.length()-1));
+            varComplement = new StringBuffer(varComplement.substring(0, varComplement.length() - 1));
         }
 
 
-        StringBuffer blocked = new StringBuffer();
-        blocked.append("blocked(")
-                .append(rule.getRuleID());
-        pubHeadGenerator(rule, blocked);
-        blocked.append(" :- ");
+        blockedRule.append(pubHeadGenerator(rule))
+                .append(") :- ");
 
         for (Integer i : rule.getPosbody()) {
-            StringBuffer posBlocked = new StringBuffer(blocked);
+            StringBuffer posBlocked = new StringBuffer(blockedRule);
             posBlocked.append("not ")
                     .append(rule.getLiteralReverseMap().get(i))
                     .append(",")
                     .append(varComplement)
-                    .append(".")
-                    .toString();
-            if(posBlocked.length()!=0)
-                System.out.println(posBlocked);
+                    .append(".\n");
+
+            if (posBlocked.length() != 0)
+                ruleWriter.write(posBlocked.toString());
         }
 
         for (Integer i : rule.getNegbody()) {
-            StringBuffer negBlocked = new StringBuffer(blocked);
+            StringBuffer negBlocked = new StringBuffer(blockedRule);
             negBlocked.append(rule.getLiteralReverseMap().get(i))
-                    .append(".")
+                    .append(".\n")
                     .toString();
 
-            if(negBlocked.length()!=0)
-                System.out.println(negBlocked);
+            if (negBlocked.length() != 0)
+                ruleWriter.write(negBlocked.toString());
         }
     }
 
-    private void pubHeadGenerator(ASPRule rule, StringBuffer posBlock) {
-        if(rule.getHead().size()!=0){
-            posBlock.append(",h(").append(rule.getRuleLiteralByPart("head")).append(")");
+    private StringBuffer pubHeadGenerator(ASPRule rule) {
+        StringBuffer pubHead = new StringBuffer();
+        if (rule.getHead().size() != 0) {
+            pubHead.append(",h(").append(rule.getRuleLiteralByPart("head")).append(")");
         }
-        if(rule.getPosbody().size()!=0){
-            posBlock.append(",pB(").append(rule.getRuleLiteralByPart("posBody")).append(")");
+        if (rule.getPosbody().size() != 0) {
+            pubHead.append(",pB(").append(rule.getRuleLiteralByPart("posBody")).append(")");
         }
-        if(rule.getNegbody().size()!=0){
-            posBlock.append(",nB(").append(rule.getRuleLiteralByPart("negBody").replace("not ", "")).append(")");
+        if (rule.getNegbody().size() != 0) {
+            pubHead.append(",nB(").append(rule.getRuleLiteralByPart("negBody").replace("not ", "")).append(")");
         }
+        return pubHead;
     }
 
-    private void applicableGenerator(ASPRule rule) {
-        if(rule.getPosbody().size() + rule.getNegbody().size()==0) {
-            return ;
+    private void applicableGenerator(ASPRule rule, FileWriter ruleWriter) throws IOException {
+        if (rule.getPosbody().size() + rule.getNegbody().size() == 0) {
+            return;
         }
-        StringBuffer stringBuffer = new StringBuffer();
-        stringBuffer.append("applicable(").append(rule.getRuleID());
-        pubHeadGenerator(rule, stringBuffer);
-        stringBuffer.append(") :- ");
+        StringBuffer applicableRule = new StringBuffer();
+        applicableRule.append("applicable(").append(rule.getRuleID()).append(pubHeadGenerator(rule));
+        applicableRule.append(") :- ");
         String lit = rule.getRuleLiteralByPart("posBody");
         if (lit.length() != 0)
-            stringBuffer.append(lit);
+            applicableRule.append(lit);
         lit = rule.getRuleLiteralByPart("negBody");
         if (lit.length() != 0)
-            stringBuffer.append(",").append(lit);
+            applicableRule.append(",").append(lit);
 
-        stringBuffer.append(".");
+        applicableRule.append(".\n");
 
-        if(stringBuffer.length()!=0)
-            System.out.println(stringBuffer);
+        if (applicableRule.length() != 0)
+            ruleWriter.write(applicableRule.toString());
     }
 
-    public static void main(String[] args) throws IOException {
-        KernelTransformation kernelTransformation = new KernelTransformation("rules_raw.lp", "rules_grounded.lp");
-        kernelTransformation.kernelTransform();
-    }
 }

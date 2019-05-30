@@ -1,2 +1,6 @@
-dummy(tux).
-dummy(tweety).
+var(tux).
+var(tweety).
+var(tux).
+var(tweety).
+var(tux).
+var(tweety).

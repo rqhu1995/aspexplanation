@@ -1,0 +1,11 @@
+clingo version 5.3.0
+Reading from rules_grounded.lp ...
+Solving...
+Answer: 1
+bird(tux) bird(tweety) neg_fly(tweety) fly(tux) penguin(tweety) walk(tweety) applicable(0,h(fly(tux)),pB(bird(tux)),nB(neg_fly(tux))) var(tux) var(tweety) blocked(0,h(fly(tweety)),pB(bird(tweety)),nB(neg_fly(tweety))) applicable(2,h(walk(tweety)),pB(neg_fly(tweety))) applicable(1,h(neg_fly(tweety)),pB(penguin(tweety))) blocked(2,h(walk(tux)),pB(neg_fly(tux))) blocked(1,h(neg_fly(tux)),pB(penguin(tux)))
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.008s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.003s

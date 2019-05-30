@@ -55,7 +55,7 @@ public class RuleFileParser {
     }
 
     public static void main(String[] args) {
-        RuleFileParser ruleFileParserTest = new RuleFileParser("testFile.lp");
+        RuleFileParser ruleFileParserTest = new RuleFileParser("grounded.lp");
         ruleFileParserTest.parsingRule();
     }
 
