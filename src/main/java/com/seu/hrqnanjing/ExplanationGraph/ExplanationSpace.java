@@ -106,14 +106,23 @@ public class ExplanationSpace {
     public void visitSpace() {
         for (GeneralNode gNode : nodeList) {
             System.out.println(gNode.getNodeID() + "," + gNode.getNodeElement());
-            if(gNode instanceof LiteralNode){
+            if (gNode instanceof LiteralNode) {
                 System.out.println(((LiteralNode) gNode).getConnectedNodeList().toString());
             }
-            if(gNode instanceof RuleNode){
-                System.out.println(((RuleNode) gNode).getConnectedNodeList(1).toString()+","+
+            if (gNode instanceof RuleNode) {
+                System.out.println(((RuleNode) gNode).getConnectedNodeList(1).toString() + "," +
                         ((RuleNode) gNode).getConnectedNodeList(2).toString());
             }
         }
+    }
+
+    public LiteralNode getLitNodeByLiteral(String literal) {
+        for (LiteralNode literalNode : literalNodeList) {
+            if (literalNode.getLiterals().equals(literal)) {
+                return literalNode;
+            }
+        }
+        return null;
     }
 
     private void setLiteralNodes(ASPRule r, RuleNode ruleNode, HashSet<Integer> litList, String part) {
@@ -129,11 +138,11 @@ public class ExplanationSpace {
                 setLiteralNodeList(literalNode);
             }
 
-            if (part == "head") {
+            if (part.equals("head")) {
                 literalNode.setConnectedNodeList(ruleNode);
-            } else if (part == "posBody") {
+            } else if (part.equals("posBody")) {
                 ruleNode.setConnectedNodeList(literalNode, 1);
-            } else if (part == "negBody") {
+            } else if (part.equals("negBody")) {
                 ruleNode.setConnectedNodeList(literalNode, 2);
             }
         }

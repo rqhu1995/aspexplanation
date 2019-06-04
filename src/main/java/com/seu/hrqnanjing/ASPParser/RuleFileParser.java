@@ -55,8 +55,11 @@ public class RuleFileParser {
     }
 
     public static void main(String[] args) {
-        RuleFileParser ruleFileParserTest = new RuleFileParser("grounded.lp");
-        ruleFileParserTest.parsingRule();
+        RuleFileParser ruleFileParserTest = new RuleFileParser("test.lp");
+        ArrayList<ASPRule> arr = ruleFileParserTest.parsingRule();
+        for (ASPRule aspRule : arr) {
+            System.out.println(aspRule.toString());
+        }
     }
 
 }

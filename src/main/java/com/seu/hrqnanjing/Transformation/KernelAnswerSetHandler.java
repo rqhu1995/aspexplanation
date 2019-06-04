@@ -3,10 +3,10 @@ package com.seu.hrqnanjing.Transformation;
 import com.seu.hrqnanjing.Util.ShellExecutor;
 
 import java.io.*;
-import java.util.regex.*;
-
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @program: aspexplanation
@@ -17,25 +17,24 @@ import java.util.Collections;
 
 public class KernelAnswerSetHandler {
 
-    FileWriter ruleFileWriter;
+    private FileWriter ruleFileWriter;
 
-    public KernelAnswerSetHandler() throws IOException {
-        ruleFileWriter = new FileWriter("grounded.lp",true);
+    KernelAnswerSetHandler(String fileName) throws IOException {
+        ruleFileWriter = new FileWriter(fileName, true);
     }
 
     //调用Clingo求回答集，并返回字符串给Parser
     private static String answerSetGenerator() throws IOException, InterruptedException {
         ShellExecutor executor = new ShellExecutor();
-        executor.executeCommand("clingo 0 rules_grounded.lp rules_raw.lp > res.txt");
-        Thread.sleep(100);
+        executor.executeCommand("clingo 0 rules_raw.lp > res.txt");
+        Thread.sleep(2000);
         FileReader fr = new FileReader(new File("res.txt"));
         BufferedReader br = new BufferedReader(fr);
         String line;
-        StringBuffer resultText = new StringBuffer();
+        StringBuilder resultText = new StringBuilder();
         while ((line = br.readLine()) != null) {
             resultText.append("\n").append(line);
         }
-        //System.out.println(resultText);
         return resultText.toString();
     }
 
@@ -76,44 +75,46 @@ public class KernelAnswerSetHandler {
     }
 
     private void grounding(String s) throws IOException {
-        String[] parts = {"h","pB","nB"};
+        String[] parts = {"h", "pB", "nB"};
         String pattern;
         Pattern r;
         Matcher m;
-        StringBuffer groundedRule = new StringBuffer();
-        for (String part : parts) {
-            pattern = "(?<="+part+"\\()(.*?)((\\),(nB|h|pB))|(\\)\\s)|(\\)\\)\n))";
-            r = Pattern.compile(pattern);
-            m = r.matcher(s);
-            if(m.find()){
-                if(part.equals("h")){
-                    groundedRule.append(m.group(1)).append(" :- ");
-                }else if(part.equals("pB")){
-                    groundedRule.append(m.group(1)).append(",");
-                }else if(part.equals("nB")){
-                    String[] nBodies = m.group(1).split(",");
-                    for (String nBody : nBodies) {
-                        groundedRule.append("not ").append(nBody).append(",");
+        StringBuilder groundedRule = new StringBuilder();
+        if(!(s.contains("applicable")&&!(s.contains("blocked")))){
+            System.out.println(s);
+            groundedRule.append(s.replace("\n","."));
+        }else {
+            for (String part : parts) {
+                pattern = "(?<=" + part + "\\()(.*?)((\\),(nB|h|pB))|(\\)\\s)|(\\)\\)\n))";
+                r = Pattern.compile(pattern);
+                m = r.matcher(s);
+                if (m.find()) {
+                    System.out.println(s + "!!123" + m.group(1));
+                    if (part.equals("h")) {
+                        groundedRule.append(m.group(1)).append(" :- ");
+                    } else if (part.equals("pB")) {
+                        groundedRule.append(m.group(1)).append(",");
+                    } else if (part.equals("nB")) {
+                        String[] nBodies = m.group(1).split(",");
+                        for (String nBody : nBodies) {
+                            groundedRule.append("not ").append(nBody).append(",");
+                        }
                     }
                 }
             }
+
+            if (groundedRule.toString().endsWith(",")) {
+                groundedRule.delete(groundedRule.length() - 1, groundedRule.length());
+            }
+            if (groundedRule.toString().endsWith(" :- ")) {
+                groundedRule = new StringBuilder(groundedRule.toString().replace(" :- ", ""));
+            }
+            groundedRule.append(".");
         }
 
-        if(groundedRule.toString().endsWith(",")){
-            groundedRule.delete(groundedRule.length()-1,groundedRule.length());
-        }
-        groundedRule.append(".");
-
-        if(groundedRule.length()>1){
-            ruleFileWriter.write(groundedRule.toString()+"\n");
+        if (groundedRule.length() > 1) {
+            ruleFileWriter.write(groundedRule.toString() + "\n");
         }
 
-    }
-
-    public static void main(String[] args) throws IOException, InterruptedException {
-        KernelTransformation kernelTransformation = new KernelTransformation("rules_raw.lp", "rules_grounded.lp");
-        kernelTransformation.kernelTransform();
-        KernelAnswerSetHandler kernelAnswerSetHandler = new KernelAnswerSetHandler();
-        kernelAnswerSetHandler.groundedASP();
     }
 }

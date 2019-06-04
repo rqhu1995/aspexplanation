@@ -8,11 +8,19 @@ public class ASPRule {
     private HashSet<Integer> head = new HashSet<>();
     private HashSet<Integer> positiveBody = new HashSet<>();
     private HashSet<Integer> negativeBody = new HashSet<>();
-    private HashSet<HashSet<Integer>> body = new HashSet<>();
     private HashMap<String, Integer> literalMap = new HashMap<>();
     private HashMap<Integer, String> literalReverseMap = new HashMap<>();
     private HashMap<String, String> ruleLiteralByPart = new HashMap<>();
-    private HashMap<String, HashSet<String>> atomVarMap = new HashMap<>();
+
+    public HashSet<String> getExpressionTable() {
+        return expressionTable;
+    }
+
+    public void setExpressionTable(String expression) {
+        this.expressionTable.add(expression);
+    }
+
+    private HashSet<String> expressionTable = new HashSet<>();
     private int ruleID = -1;
     private HashSet<String> varList = new HashSet<>();
 
@@ -38,13 +46,6 @@ public class ASPRule {
         varList.add(variable);
     }
 
-    public void setAtomVarMap(String atom, String variable) {
-        if(!atomVarMap.containsKey(atom)){
-            this.atomVarMap.put(atom,new HashSet<String>());
-        }
-        this.atomVarMap.get(atom).add(variable);
-    }
-
     public String getRuleLiteralByPart(String part) {
         return ruleLiteralByPart.get(part);
     }
@@ -67,15 +68,6 @@ public class ASPRule {
         negativeBody.add(negLiteral);
     }
 
-
-
-
-    public void setBody() {
-        body.add(getPosbody());
-        body.add(getNegbody());
-    }
-
-
     public HashSet<Integer> getHead() {
         return this.head;
     }
@@ -88,49 +80,47 @@ public class ASPRule {
         return negativeBody;
     }
 
-    public HashSet<HashSet<Integer>> getBody() {
-        return body;
-    }
+    public void setRuleLiteralByPart() {
 
-    public void setRuleLiteralByPart(){
-
-        StringBuffer head = new StringBuffer();
-        StringBuffer posBody = new StringBuffer();
-        StringBuffer negBody = new StringBuffer();
+        StringBuilder head = new StringBuilder();
+        StringBuilder posBody = new StringBuilder();
+        StringBuilder negBody = new StringBuilder();
+        StringBuilder expression = new StringBuilder();
 
         for (Integer i : this.getHead()) {
-            head.append(literalReverseMap.get(i)+",");
+            head.append(literalReverseMap.get(i)).append(",");
         }
         for (Integer i : this.getPosbody()) {
-            posBody.append(literalReverseMap.get(i)+",");
+            posBody.append(literalReverseMap.get(i)).append(",");
         }
         for (Integer i : this.getNegbody()) {
-            negBody.append("not " + literalReverseMap.get(i)+",");
+            negBody.append("not ").append(literalReverseMap.get(i)).append(",");
+        }
+        for (String exp : this.getExpressionTable()) {
+            expression.append(exp).append(",");
         }
 
-        String headLit = (((head.length()-1)>=0)?head.substring(0,head.length()-1):"");
-        String posLit = (((posBody.length()-1)>=0)?posBody.substring(0,posBody.length()-1):"");
-        String negLit = (((negBody.length()-1)>=0)?negBody.substring(0,negBody.length()-1):"");
-
+        String headLit = (((head.length() - 1) >= 0) ? head.substring(0, head.length() - 1) : "");
+        String posLit = (((posBody.length() - 1) >= 0) ? posBody.substring(0, posBody.length() - 1) : "");
+        String negLit = (((negBody.length() - 1) >= 0) ? negBody.substring(0, negBody.length() - 1) : "");
+        String expressions = (((expression.length() - 1) >= 0) ? expression.substring(0, expression.length() - 1) : "");
         setRuleLiteralByPart("head", headLit);
         setRuleLiteralByPart("posBody", posLit);
         setRuleLiteralByPart("negBody", negLit);
-
-        //System.out.println(headLit+"!!!"+posLit+"!!!"+negLit+"!!!");
-
+        setRuleLiteralByPart("expression", expressions);
     }
 
     @Override
     public String toString() {
 
-        return "====Rule " + ruleType + "====\n"+ "head:[" + getRuleLiteralByPart("head") +
+        return "====Rule " + ruleType + "====\n" + "head:[" + getRuleLiteralByPart("head") +
                 "],posBody:[" + getRuleLiteralByPart("posBody") +
-                "],negBody:[" + getRuleLiteralByPart("negBody")+"]"
+                "],negBody:[" + getRuleLiteralByPart("negBody") + "]"
                 + "\n==============";
     }
 
     public void setRuleLiteralByPart(String part, String content) {
-        this.ruleLiteralByPart.put(part,content);
+        this.ruleLiteralByPart.put(part, content);
     }
 
     public void setRuleType() {
@@ -150,12 +140,12 @@ public class ASPRule {
     }
 
     /**
-    * @Description: 获取规则类型
-    * @Param: []
-    * @return: 1：完整rule，2：事实，3：约束，4：空规则
-    * @Author: Runqiu Hu
-    * @Date: 2019-05-14
-    */
+     * @Description: 获取规则类型
+     * @Param: []
+     * @return: 1：完整rule，2：事实，3：约束，4：空规则
+     * @Author: Runqiu Hu
+     * @Date: 2019-05-14
+     */
     public int getRuleType() {
         return ruleType;
     }

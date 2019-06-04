@@ -4,8 +4,10 @@ import com.seu.hrqnanjing.ExplanationGraph.ExplanationSpace;
 import com.seu.hrqnanjing.ExplanationGraph.GeneralNode;
 import com.seu.hrqnanjing.ExplanationGraph.LiteralNode;
 import com.seu.hrqnanjing.ExplanationGraph.RuleNode;
+import guru.nidi.graphviz.attribute.Color;
 import guru.nidi.graphviz.attribute.Label;
 import guru.nidi.graphviz.attribute.Records;
+import guru.nidi.graphviz.attribute.Style;
 import guru.nidi.graphviz.engine.Format;
 import guru.nidi.graphviz.engine.Graphviz;
 import guru.nidi.graphviz.model.MutableGraph;
@@ -45,6 +47,12 @@ public class GraphDrawer {
         }
     }
 
+    public void spaceTraversal(LiteralNode startNode) {
+        boolean[] visited = new boolean[explanationSpace.nodeCount()];
+        GeneralNode dummyNode = null;
+        spaceTraversal(startNode,visited,dummyNode);
+    }
+
     /**
      * @Description: 对解释空间进行遍历（图的深度优先搜索）
      * @Param: []
@@ -77,11 +85,11 @@ public class GraphDrawer {
             MutableNode mutParentNode = mutableNodeHashMap.get(parentNode.getNodeID());
             //当前节点为正体部
             if (gNode instanceof LiteralNode && ((RuleNode) parentNode).getConnectedNodeList(1).contains(gNode)) {
-                mutParentNode.addLink(between(port("pbody", SOUTH), mutableNodeHashMap.get(gNode.getNodeID()).port(NORTH)).with(Label.of("√")));
+                mutParentNode.addLink(between(port("pbody", SOUTH), mutableNodeHashMap.get(gNode.getNodeID()).port(NORTH)).with(Label.of("+")));
             }
             //当前节点为负体部
             else if (gNode instanceof LiteralNode && ((RuleNode) parentNode).getConnectedNodeList(2).contains(gNode)) {
-                mutParentNode.addLink(between(port("nbody", SOUTH), mutableNodeHashMap.get(gNode.getNodeID()).port(NORTH)).with(Label.of("×")));
+                mutParentNode.addLink(between(port("nbody", SOUTH), mutableNodeHashMap.get(gNode.getNodeID()).port(NORTH)).with(Label.of("-")));
             }
             //节点非规则节点（文字节点）
             else {
@@ -90,7 +98,7 @@ public class GraphDrawer {
         }
     }
 
-    private MutableNode createSingleRuleNode(RuleNode gNode) {
+        private MutableNode createSingleRuleNode(RuleNode gNode) {
         MutableNode graphRuleNode;
         String head = gNode.getRule().getRuleLiteralByPart("head");
         String posBody = gNode.getRule().getRuleLiteralByPart("posBody");
@@ -113,7 +121,7 @@ public class GraphDrawer {
                     Records.of(rec("head", head),
                             rec("pbody", posBody),
                             rec("nbody", negBody)
-                    ));
+                    ),Color.RED);
         }else{
             graphRuleNode = mutNode(String.valueOf(gNode.getNodeID())).attrs().add(
                     Records.of(rec("head", head)));
@@ -126,15 +134,20 @@ public class GraphDrawer {
         return graphLitNode;
     }
 
-    public void graphDisplay() {
+    public void graphDisplay(String fileName) {
 //        graph.graphAttrs().add("ranksep", 1).
 //                graphAttrs().add("nodesep", 0.5).
 //                graphAttrs().add("splines", "compound");
                 //graphAttrs().add("dpi",0);
         try {
-            Graphviz.fromGraph(graph).render(Format.PNG).toFile(new File("example/ex2m.png"));
+            Graphviz.fromGraph(graph).render(Format.PNG).toFile(new File("example/" + fileName));
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void clearGraph(){
+        graph = mutGraph("expGraph").setDirected(true);
+        mutableNodeHashMap.clear();
     }
 }

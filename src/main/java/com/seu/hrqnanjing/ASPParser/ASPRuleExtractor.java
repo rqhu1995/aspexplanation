@@ -1,12 +1,7 @@
 package com.seu.hrqnanjing.ASPParser;
 
 import com.seu.hrqnanjing.ASPParser.LPMLNParser.TermContext;
-import com.seu.hrqnanjing.ExplanationGraph.ExplanationSpace;
-import com.seu.hrqnanjing.ExplanationGraph.LiteralNode;
-import com.seu.hrqnanjing.ExplanationGraph.RuleNode;
 
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 
 /**
@@ -22,7 +17,7 @@ public class ASPRuleExtractor extends LPMLNBaseVisitor {
     @Override
     public Object visitHead(LPMLNParser.HeadContext ctx) {
         List<LPMLNParser.LiteralContext> heads = ctx.literal();
-        for (LPMLNParser.LiteralContext ctxs: heads) {
+        for (LPMLNParser.LiteralContext ctxs : heads) {
             String head = ctxs.getText();
             int idx = literalMapSet(head);
             ruleForParse.setHead(idx);
@@ -37,7 +32,7 @@ public class ASPRuleExtractor extends LPMLNBaseVisitor {
             literalIdx = ruleForParse.getLiteralMap().get(literal);
         } else {
             ruleForParse.getLiteralMap().put(literal, ruleForParse.getLiteralMap().size());
-            ruleForParse.getLiteralReverseMap().put(ruleForParse.getLiteralMap().size()-1, literal);
+            ruleForParse.getLiteralReverseMap().put(ruleForParse.getLiteralMap().size() - 1, literal);
             literalIdx = ruleForParse.getLiteralMap().size() - 1;
         }
 
@@ -45,15 +40,16 @@ public class ASPRuleExtractor extends LPMLNBaseVisitor {
     }
 
 
-
-
     @Override
     public Object visitAtom(LPMLNParser.AtomContext ctx) {
         for (TermContext termContext : ctx.term()) {
-            if(termContext.CONSTANT()!=null) {
+            if (termContext.CONSTANT() != null) {
                 ruleForParse.setConstantList(termContext.CONSTANT().getText());
             }
-            if(termContext.VAR()!=null){
+            if (termContext.STRING()!=null){
+                ruleForParse.setConstantList(termContext.STRING().getText());
+            }
+            if (termContext.VAR() != null) {
                 ruleForParse.setVarList(termContext.VAR().getText());
             }
         }
@@ -66,15 +62,24 @@ public class ASPRuleExtractor extends LPMLNBaseVisitor {
         int litIdx;
 
         // 下方是正原子(extended不是pos就是neg）
-        if(ctx.literal()!=null) {
+        if (ctx.literal() != null) {
             litIdx = literalMapSet(ctx.literal().getText());
             ruleForParse.setPosbody(litIdx);
-        }else{
+        } else {
             litIdx = literalMapSet(ctx.default_literal().literal().getText());
             ruleForParse.setNegbody(litIdx);
         }
         return super.visitExtended_literal(ctx);
     }
+
+    @Override
+    public Object visitBody_aggregate(LPMLNParser.Body_aggregateContext ctx) {
+        if(ctx.aggregate_elements()!=null){
+            System.out.println(ctx.getText());
+        }
+        return super.visitBody_aggregate(ctx);
+    }
+
 
     @Override
     public Object visitLiteral(LPMLNParser.LiteralContext ctx) {
@@ -84,8 +89,11 @@ public class ASPRuleExtractor extends LPMLNBaseVisitor {
     }
 
     @Override
-    public Object visitBody(LPMLNParser.BodyContext ctx) {
-        return super.visitBody(ctx);
+    public Object visitRelation_expr(LPMLNParser.Relation_exprContext ctx) {
+        if(ctx!=null){
+            ruleForParse.setExpressionTable(ctx.getText());
+        }
+        return super.visitRelation_expr(ctx);
     }
 
     @Override
@@ -95,6 +103,7 @@ public class ASPRuleExtractor extends LPMLNBaseVisitor {
 
     public ASPRule getRuleForParse() {
         ruleForParse.setRuleLiteralByPart();
+        ruleForParse.setRuleType();
         return ruleForParse;
     }
 

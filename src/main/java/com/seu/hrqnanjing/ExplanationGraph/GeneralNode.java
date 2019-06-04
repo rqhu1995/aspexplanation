@@ -3,9 +3,9 @@ package com.seu.hrqnanjing.ExplanationGraph;
 import java.util.ArrayList;
 
 /**
- * 通用节点类
- * 节点ID
- * 相连节点集合
+ * 通用节点类：
+ * int 节点ID
+ * ArrList 相连节点集合
  */
 public class GeneralNode {
     private int nodeID = -1;

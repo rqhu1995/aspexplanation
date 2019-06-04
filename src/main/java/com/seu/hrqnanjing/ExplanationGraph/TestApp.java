@@ -1,22 +1,22 @@
 package com.seu.hrqnanjing.ExplanationGraph;
 
 
-
-import com.seu.hrqnanjing.GringoPreprocess.GroundRuleGenerator;
+import com.seu.hrqnanjing.Transformation.KernelTransformer;
 import com.seu.hrqnanjing.Util.GraphDrawer;
 
-import java.io.File;
 import java.io.IOException;
 
 public class TestApp {
-    public static void main(String[] args) throws IOException {
-        //GroundRuleGenerator generator = new GroundRuleGenerator("rules_raw.lp","enumerate.lp", "rules_grounded.lp");
-        //generator.gringoInputComplement();
-        //generator.getGroundFile("grep \"^[^#{]\"");
+    public static void main(String[] args) throws IOException, InterruptedException {
         ExplanationSpace explanationSpace = new ExplanationSpace();
-        explanationSpace.setAllNode("grounded.lp");
+        KernelTransformer kernelTransformer = new KernelTransformer("rules_raw.lp","vars.lp","rules_grounded.lp");
+        kernelTransformer.kernelTransform();
+        explanationSpace.setAllNode("rules_grounded.lp");
         GraphDrawer graphDrawer = new GraphDrawer(explanationSpace);
         graphDrawer.spaceTraversal();
-        graphDrawer.graphDisplay();
+        graphDrawer.graphDisplay("explanationSpace.png");
+//        graphDrawer.clearGraph();
+//        graphDrawer.spaceTraversal(explanationSpace.getLitNodeByLiteral("innocent(sally)"));
+//        graphDrawer.graphDisplay("fly_tux_explanation.png");
     }
 }
